@@ -16,7 +16,7 @@ cd ./vuejs-app
 yarn
 Yarn start
 
-Development Server is running on [http://localhost:4200/](http://localhost:4200/)
+Development Server is running on http://localhost:4200/
 
 
 # Happy hacking ! ;-)
