@@ -1,12 +1,13 @@
 This is an tutorial for Rebuild Tesla's Battery Range Calculator with React.
 
 
-# Workshop ReactJS and Vuejs
+# Workshop ReactJS
 Hey guys, tonight you'll have to build this app:
 
 ![Bookstore gif](https://cdn-images-1.medium.com/max/2000/1*8hlNoLDBy5XWZct5tAtPoA.png)
 
 Using either react or vuejs, choose your weapon ⚔
+
 ## Getting started
 ```bash
 git clone https://github.com/petereijgermans11/workshop-reactjs-vuejs.git
