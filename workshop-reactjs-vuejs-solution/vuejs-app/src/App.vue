@@ -1,8 +1,6 @@
 <template>
     <div id="app">
-        <header class="header">
-            <img :src="logo">
-        </header>
+        <tesla-header :greeting = "greetings" />
         <div class="wrapper">
             <tesla-battery></tesla-battery>
         </div>
@@ -11,17 +9,17 @@
 
 <script>
     import TeslaBattery from './tesla-battery/tesla-battery.component';
-
-    import logo from './assets/logo.svg';
+    import TeslaHeader from './tesla-battery/tesla-header.component';
 
     export default {
         name: 'app',
         components: {
             TeslaBattery,
+            TeslaHeader
         },
         data() {
             return {
-                logo
+                greetings: "Hello TESLA !!!"
             };
         }
     };

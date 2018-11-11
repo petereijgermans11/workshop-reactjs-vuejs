@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <header class="header">
-            <img :src="logo">
+            <img :src="logo" :title=greeting>
         </header>
         <div class="wrapper">
             <tesla-battery></tesla-battery>
@@ -21,7 +21,8 @@
         },
         data() {
             return {
-                logo
+                logo,
+                greeting: "Hello TESLA !!!"
             };
         }
     };

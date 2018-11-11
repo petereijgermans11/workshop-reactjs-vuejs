@@ -14,7 +14,7 @@ git clone https://github.com/petereijgermans11/workshop-reactjs-vuejs.git
 
 cd ./vuejs-app
 yarn
-Yarn start
+yarn start
 
 Development Server is running on http://localhost:4200/
 
