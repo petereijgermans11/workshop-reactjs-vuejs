@@ -136,7 +136,7 @@ Uncaught ReferenceError: increment is not defined
 
 # Exercise 1:
  Create the 'tesla-header.component' for showing the tesla 'logo'.
- See the slides for the solution.
+ HINT: See the slides for the solution.
 
 # Exercise 2:
 - write a custom filter for translation Miles to km (in the tesla-stats.component)
@@ -152,15 +152,14 @@ Solution:
 ```
 
 # Exercise 3:
-- decrement speed does not work (in the tesla-counter.component):
+- decrement speed does not work (in the tesla-counter.component). Fix the decrement function:
 
 See function:
  decrement() {}
  
 
 # Exercise 4:
-- 'Arrow down' does not work when the focus is on it (in the tesla-counter.component):
-
+- 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
 See the 'onKeyUp' function (HINT add the 'ArrowDown' handler):
 
 ```bash
@@ -172,7 +171,7 @@ See the 'onKeyUp' function (HINT add the 'ArrowDown' handler):
 
 # Exercise 5:
 
-The heat must go on when the temparature is 10 degrees Celsius.
+The heat must go on when the temparature is 10 degrees Celsius. Now it goes on at 20 degrees.
 
 See tesla-climate.component:
 The limit must be > 10
