@@ -19,7 +19,7 @@ cd ./vuejs-app
 
 ### Getting started
 
-- `yarn` To install all the dependencies for this Hackjam. If you don't have yarn installed, install it via `npm i yarn`
+- `yarn` To install all the dependencies for this workshop. If you don't have yarn installed, install it via `npm i yarn`
 - `yarn start` To start the website locally.
 - Navigate to [http://localhost:8080/](http://localhost:8080/) To see the website running, full of bugs :)
 
@@ -31,10 +31,11 @@ The main.js file is the entry point of the site, it is here that your first comp
 
 ### App.vue
 
-This is the first component mounted by Vue. Fix the errors in this file before moving :)
+This is the first component mounted by Vue.
+This component consist of the tesla-battery.component. This is the container component.
+The tesla-battery.component: Provides data and actions to presentational components.
 
-
-# Happy hacking ! ;-)
+# Happy coding ! ;-)
 ```
 
 
@@ -53,28 +54,20 @@ found in
 
 See line in the 'tesla-car.component':
  
- props: {
+  props: {
     wheelsize: {
       type: String,
       required: true,
     },
-
-Sol:
- props: {
-    wheelsize: {
-      type: Number,
-      required: true,
-    },    
+  
 
 # ERROR 2:
 vue.runtime.esm.js?ff9b:574 [Vue warn]: Invalid prop: type check failed for prop "wheelsize". Expected Number, got Undefined.
 
 See line in the 'tesla-battery.component':  
-<tesla-car :wheelsize="wheels" :speed="tesla.speed" />
 
-Sol: :wheelsize="tesla:wheels"
+'<tesla-car :wheelsize="wheels" :speed="tesla.speed" />'
 
-———————————
 
 # ERROR 3:
 [Vue warn]: Property or method "model" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
@@ -84,11 +77,10 @@ found in:
 ---> <TeslaStats> at src/tesla-battery/components/tesla-stats.component.vue
 
 see 'tesla-stats.component' (HINT: the :key is wrong)
-<li v-for="stat in stats" :key="model">
+'<li v-for="stat in stats" :key="model">'
        
-Sol: <li v-for="stat in stats" :key="stat.model">
 
-———————————
+
 # ERROR 4:
 When you click op the 'Speed button', then you get the following error:
 
@@ -97,12 +89,8 @@ Uncaught ReferenceError: increment is not defined
 
 
  See 'tesla-counter.component' (HINT: the onclick-event is wrong):
-<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
-<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button> 
-
-Sol: @click
-
-———--------
+'<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>'
+'<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>'
 
 
 # ERROR 5:
@@ -132,11 +120,6 @@ See 'tesla-climate.component':
     },
   },
 
-Sol:
-onClick: {
-      type: Function,
-      required: true,
-    },
 
 # ERROR 6:
 When you click op the 'Wheelsize button', then you get the following error:
@@ -150,7 +133,7 @@ found in
          <Root>
 
 See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
-         <tesla-wheels v-model="wheels" />
+         '<tesla-wheels v-model="wheels" />'
 
 
 
@@ -197,5 +180,4 @@ The heat must go on when the temparature is 10 degrees Celsius.
 See tesla-climate.component
 The limit must be > 10
 
-Sol: :limit="tesla.temperature > 10"
 
