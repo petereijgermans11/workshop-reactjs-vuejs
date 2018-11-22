@@ -169,11 +169,3 @@ See the 'onKeyUp' function (HINT add the 'ArrowDown' handler):
       };
 ```
 
-# Exercise 5:
-
-The heat must go on when the temparature is 10 degrees Celsius. Now it goes on at 20 degrees.
-
-See tesla-climate.component:
-The limit must be > 10
-
-
