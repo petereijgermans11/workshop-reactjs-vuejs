@@ -58,7 +58,6 @@ See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
 
 ```
 
-
 # ERROR 2:
 ```bash
 Invalid prop: type check failed for prop "wheelsize". Expected String, got Number.
@@ -135,9 +134,6 @@ Uncaught ReferenceError: increment is not defined
 <button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
 ```
 
-
-
-
 # Exercise 1:
  Create the 'tesla-header.component' for showing the tesla 'logo'.
  See the slides for the solution.
@@ -173,8 +169,6 @@ See the 'onKeyUp' function (HINT add the 'ArrowDown' handler):
         ArrowUp: () => this.increment(),
       };
 ```
-
-
 
 # Exercise 5:
 
