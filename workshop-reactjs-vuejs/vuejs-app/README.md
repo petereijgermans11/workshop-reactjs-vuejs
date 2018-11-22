@@ -43,7 +43,9 @@ Please: fix all the bugs before building new features
 
 
 # ERROR 1:
+```bash
 Invalid prop: type check failed for prop "wheelsize". Expected String, got Number.
+
 
 found in
 
@@ -59,17 +61,19 @@ See line in the 'tesla-car.component':
       type: String,
       required: true,
     },
-  
+ ``` 
 
 # ERROR 2:
+```bash
 vue.runtime.esm.js?ff9b:574 [Vue warn]: Invalid prop: type check failed for prop "wheelsize". Expected Number, got Undefined.
 
 See line in the 'tesla-battery.component':  
 
-'<tesla-car :wheelsize="wheels" :speed="tesla.speed" />'
-
+<tesla-car :wheelsize="wheels" :speed="tesla.speed" />
+```
 
 # ERROR 3:
+```bash
 [Vue warn]: Property or method "model" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
 
 found in:
@@ -77,11 +81,12 @@ found in:
 ---> <TeslaStats> at src/tesla-battery/components/tesla-stats.component.vue
 
 see 'tesla-stats.component' (HINT: the :key is wrong)
-'<li v-for="stat in stats" :key="model">'
+<li v-for="stat in stats" :key="model">
        
-
+```
 
 # ERROR 4:
+```bash
 When you click op the 'Speed button', then you get the following error:
 
 Uncaught ReferenceError: increment is not defined
@@ -89,11 +94,12 @@ Uncaught ReferenceError: increment is not defined
 
 
  See 'tesla-counter.component' (HINT: the onclick-event is wrong):
-'<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>'
-'<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>'
-
+<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
+<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
+```
 
 # ERROR 5:
+```bash
 Invalid prop: type check failed for prop "onClick". Expected String, got Function.
 
 found in
@@ -119,9 +125,10 @@ See 'tesla-climate.component':
       required: true,
     },
   },
-
+```
 
 # ERROR 6:
+```bash
 When you click op the 'Wheelsize button', then you get the following error:
 
 Property or method "wheels" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
@@ -135,7 +142,7 @@ found in
 See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
          '<tesla-wheels v-model="wheels" />'
 
-
+```
 
 # Exercise 1:
  Create the 'tesla-header.component' for showing the tesla 'logo'.
@@ -146,12 +153,13 @@ See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
 
 Solution:  
 
+```bash
    {{stat.miles | km}}
 
    km(value) {
       return Math.floor(value * 1.609344);
     },
-
+```
 
 # Exercise 3:
 - decrement speed does not work (in the tesla-counter.component):
@@ -165,11 +173,12 @@ See function:
 
 See the onKeyUp function (HINT add the ArrowDown handler):
 
+```bash
    onKeyUp(event) {
       let handlers = {
         ArrowUp: () => this.increment(),
       };
-
+```
 
 
 
@@ -177,7 +186,7 @@ See the onKeyUp function (HINT add the ArrowDown handler):
 
 The heat must go on when the temparature is 10 degrees Celsius.
 
-See tesla-climate.component
+See tesla-climate.component:
 The limit must be > 10
 
 
