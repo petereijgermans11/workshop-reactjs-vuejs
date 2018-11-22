@@ -146,7 +146,7 @@ See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
 
 # Exercise 1:
  Create the 'tesla-header.component' for showing the tesla 'logo'.
- See the slides fot the solution.
+ See the slides for the solution.
 
 # Exercise 2:
 - write a custom filter for translation Miles to km (in the tesla-stats.component)
@@ -169,9 +169,9 @@ See function:
  
 
 # Exercise 4:
-- 'Arrow down' does not work when the focus is on it ((in the tesla-counter.component)):
+- 'Arrow down' does not work when the focus is on it (in the tesla-counter.component):
 
-See the onKeyUp function (HINT add the ArrowDown handler):
+See the 'onKeyUp' function (HINT add the 'ArrowDown' handler):
 
 ```bash
    onKeyUp(event) {
