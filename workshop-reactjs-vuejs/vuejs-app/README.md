@@ -42,7 +42,24 @@ The tesla-battery.component: Provides data and actions to presentational compone
 Please: fix all the bugs before building new features
 
 
+
 # ERROR 1:
+```bash
+Property or method "wheels" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+
+found in
+
+---> <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
+       <App> at src/App.vue
+         <Root>
+
+See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
+         '<tesla-wheels v-model="wheels" />'
+
+```
+
+
+# ERROR 2:
 ```bash
 Invalid prop: type check failed for prop "wheelsize". Expected String, got Number.
 
@@ -54,7 +71,7 @@ found in
          <App> at src/App.vue
            <Root>
 
-See line in the 'tesla-car.component':
+See line in the 'tesla-car.component' (HINT: type is wrong):
  
   props: {
     wheelsize: {
@@ -62,15 +79,6 @@ See line in the 'tesla-car.component':
       required: true,
     },
  ``` 
-
-# ERROR 2:
-```bash
-vue.runtime.esm.js?ff9b:574 [Vue warn]: Invalid prop: type check failed for prop "wheelsize". Expected Number, got Undefined.
-
-See line in the 'tesla-battery.component':  
-
-<tesla-car :wheelsize="wheels" :speed="tesla.speed" />
-```
 
 # ERROR 3:
 ```bash
@@ -87,19 +95,6 @@ see 'tesla-stats.component' (HINT: the :key is wrong)
 
 # ERROR 4:
 ```bash
-When you click op the 'Speed button', then you get the following error:
-
-Uncaught ReferenceError: increment is not defined
-    at HTMLButtonElement.onclick ((index):17)
-
-
- See 'tesla-counter.component' (HINT: the onclick-event is wrong):
-<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
-<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
-```
-
-# ERROR 5:
-```bash
 Invalid prop: type check failed for prop "onClick". Expected String, got Function.
 
 found in
@@ -109,7 +104,7 @@ found in
          <App> at src/App.vue
            <Root>
 
-See 'tesla-climate.component':
+See 'tesla-climate.component' (HINT: the onClick type is wrong):
 
  props: {
     limit: {
@@ -127,22 +122,21 @@ See 'tesla-climate.component':
   },
 ```
 
-# ERROR 6:
+# ERROR 5:
 ```bash
-When you click op the 'Wheelsize button', then you get the following error:
+When you click op the 'Speed button', then you get the following error:
 
-Property or method "wheels" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+Uncaught ReferenceError: increment is not defined
+    at HTMLButtonElement.onclick ((index):17)
 
-found in
 
----> <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
-       <App> at src/App.vue
-         <Root>
-
-See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
-         '<tesla-wheels v-model="wheels" />'
-
+ See 'tesla-counter.component' (HINT: the onclick-event is wrong):
+<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
+<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
 ```
+
+
+
 
 # Exercise 1:
  Create the 'tesla-header.component' for showing the tesla 'logo'.
