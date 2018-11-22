@@ -1,7 +1,7 @@
 <template>
   <form class="tesla-battery">
     <h1>{{ title }}</h1>
-    <tesla-car :wheelsize="wheels" :speed="tesla.speed" />
+    <tesla-car :wheelsize="tesla.wheels" :speed="tesla.speed" />
     <tesla-stats :stats="stats" />
     <div class="tesla-controls cf">
       <tesla-counter title="Speed" unit="kmh" :step="5" :min="45" :max="70" v-model="tesla.speed" />
