@@ -12,7 +12,7 @@ export default {
   name: 'tesla-car',
   props: {
     wheelsize: {
-      type: Number,
+      type: String,
       required: true,
     },
     speed: {

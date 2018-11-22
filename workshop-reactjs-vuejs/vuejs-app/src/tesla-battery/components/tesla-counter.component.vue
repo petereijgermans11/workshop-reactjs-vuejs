@@ -8,8 +8,8 @@
           <span>{{ unit }}</span>
         </p>
         <div class="tesla-counter__controls" tabindex="-1">
-          <button tabindex="-1" type="button" @click="increment" :disabled="value === max"></button>
-          <button tabindex="-1" type="button" @click="decrement" :disabled="value === min"></button>
+          <button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
+          <button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
         </div>
       </div>
     </div>
@@ -63,11 +63,7 @@ export default {
         this.$emit('input', this.value + this.step);
       }
     },
-    decrement() {
-      if (this.value > this.min) {
-        this.$emit('input', this.value - this.step);
-      }
-    },
+    decrement() {},
     onFocus() {
       this.focused = false;
     },
@@ -76,7 +72,6 @@ export default {
     },
     onKeyUp(event) {
       let handlers = {
-        ArrowDown: () => this.decrement(),
         ArrowUp: () => this.increment(),
       };
 

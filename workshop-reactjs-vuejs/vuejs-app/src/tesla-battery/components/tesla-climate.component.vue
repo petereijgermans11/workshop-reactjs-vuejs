@@ -21,7 +21,7 @@ export default {
       required: true,
     },
     onClick: {
-      type: Function,
+      type: String,
       required: true,
     },
   },

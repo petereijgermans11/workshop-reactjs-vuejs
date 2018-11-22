@@ -1,15 +1,15 @@
 <template>
   <form class="tesla-battery">
     <h1>{{ title }}</h1>
-    <tesla-car :wheelsize="tesla.wheels" :speed="tesla.speed" />
+    <tesla-car :wheelsize="wheels" :speed="tesla.speed" />
     <tesla-stats :stats="stats" />
     <div class="tesla-controls cf">
       <tesla-counter title="Speed" unit="kmh" :step="5" :min="45" :max="70" v-model="tesla.speed" />
       <div class="tesla-climate cf">
         <tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" v-model="tesla.temperature" />
-        <tesla-climate :limit="tesla.temperature > 10" :value="tesla.climate" :onClick="changeClimate" />
+        <tesla-climate :limit="tesla.temperature > 20" :value="tesla.climate" :onClick="changeClimate" />
       </div>
-      <tesla-wheels v-model="tesla.wheels" />
+      <tesla-wheels v-model="wheels" />
     </div>
     <div class="tesla-battery__notice">
       <p>
@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       title: 'Ranger Per Charge',
-      results: ['60', '60D', '75', '75D', '90D', 'P100D'],
+      tesla_models: ['60', '60D', '75', '75D', '90D', 'P100D'],
       tesla: {
         speed: 55,
         temperature: 20,
@@ -56,8 +56,8 @@ export default {
     models() {
       return teslaService.getModelData();
     },
-    stats() {
-      return this.results.map(model => {
+      stats() {
+      return this.tesla_models.map(model => {
         const {speed, temperature, climate, wheels} = this.tesla;
         const miles = this.models[model][wheels][climate ? 'on' : 'off'].speed[
           speed
