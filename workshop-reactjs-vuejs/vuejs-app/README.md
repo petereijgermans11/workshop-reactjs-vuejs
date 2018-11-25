@@ -139,30 +139,39 @@ Uncaught ReferenceError: increment is not defined
  HINT: See the slides for the solution.
 
 # Exercise 2:
-- write a custom filter for translation Miles to km (in the tesla-stats.component)
-
-Solution:  
+- write a custom 'filter' for translation Miles to km (in the tesla-stats.component)
 
 ```bash
+HINT: add the translation from Miles to km
+
    {{stat.miles | km}}
 
+
+filters: {
    km(value) {
-      return Math.floor(value * 1.609344);
+      return ... <FIXME> ...;
     },
+}
 ```
 
 # Exercise 3:
-- decrement speed does not work (in the tesla-counter.component). Fix the decrement function:
+- decrement speed does not work (in the tesla-counter.component).
 
-See function:
+```bash
+HINT: fix the decrement function:
+
  decrement() {}
+ ```
  
 
 # Exercise 4:
 - 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
-See the 'onKeyUp' function (HINT add the 'ArrowDown' handler):
+See the 'onKeyUp' function ():
 
 ```bash
+HINT: add the 'ArrowDown' handler:
+
+
    onKeyUp(event) {
       let handlers = {
         ArrowUp: () => this.increment(),
