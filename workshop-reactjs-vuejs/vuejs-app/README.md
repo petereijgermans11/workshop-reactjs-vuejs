@@ -148,9 +148,7 @@ HINT: add the translation from Miles to km
 
 
 filters: {
-   km(value) {
-      return ... <FIXME> ...;
-    },
+   ...<FIXME>...
 }
 ```
 
@@ -173,8 +171,15 @@ HINT: add the 'ArrowDown' handler:
 
 
    onKeyUp(event) {
-      let handlers = {
-        ArrowUp: () => this.increment(),
-      };
+      ...<FIXME>...
+   }
+
 ```
 
+#Exercise 5:
+
+- The v-model (2 way databinding )does not work for the tesla-counter.component
+
+#Exercise 6:
+
+Too easy for you? Use Vuex to manage the state of your app :)
