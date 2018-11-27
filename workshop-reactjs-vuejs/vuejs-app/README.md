@@ -195,6 +195,6 @@ HINT: add the 'ArrowDown' handler:
 
 ```
 
-#Exercise 5:
+# Exercise 5:
 
 Too easy for you? Use Vuex to manage the state of your app :)
