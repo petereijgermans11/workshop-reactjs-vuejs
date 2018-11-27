@@ -134,7 +134,7 @@ Uncaught ReferenceError: increment is not defined
 <button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
 ```
 
-#ERROR 6:
+# ERROR 6:
 ```bash
 
 vue.runtime.esm.js?ff9b:574 [Vue warn]: Missing required prop: "value"
@@ -195,6 +195,6 @@ HINT: add the 'ArrowDown' handler:
 
 ```
 
-#Exercise 5:
+# Exercise 5:
 
 Too easy for you? Use Vuex to manage the state of your app :)
