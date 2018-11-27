@@ -134,6 +134,25 @@ Uncaught ReferenceError: increment is not defined
 <button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
 ```
 
+#ERROR 6:
+```bash
+
+vue.runtime.esm.js?ff9b:574 [Vue warn]: Missing required prop: "value"
+
+found in
+
+---> <TeslaCounter> at src/tesla-battery/components/tesla-counter.component.vue
+       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
+         <App> at src/App.vue
+           <Root>
+
+
+See line 'tesla-battery.component' (HINT: v-model is missing):
+
+<tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" />
+
+```         
+
 # Exercise 1:
  Create the 'tesla-header.component' for showing the tesla 'logo'.
  HINT: See the slides for the solution.
@@ -177,10 +196,5 @@ HINT: add the 'ArrowDown' handler:
 ```
 
 #Exercise 5:
-
-- The 'v-model' (2-way databinding) does not work for the tesla-counter.component
-
-
-#Exercise 6:
 
 Too easy for you? Use Vuex to manage the state of your app :)
