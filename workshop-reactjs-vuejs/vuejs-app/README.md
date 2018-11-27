@@ -178,7 +178,8 @@ HINT: add the 'ArrowDown' handler:
 
 #Exercise 5:
 
-- The v-model (2 way databinding )does not work for the tesla-counter.component
+- The 'v-model' (2-way databinding) does not work for the tesla-counter.component
+
 
 #Exercise 6:
 
