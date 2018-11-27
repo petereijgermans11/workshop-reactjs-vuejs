@@ -134,7 +134,7 @@ Uncaught ReferenceError: increment is not defined
 <button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
 ```
 
-#ERROR 6:
+# ERROR 6:
 ```bash
 
 vue.runtime.esm.js?ff9b:574 [Vue warn]: Missing required prop: "value"
