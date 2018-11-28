@@ -166,6 +166,10 @@ Make the climate button work:
   }
 ```
 
+# Exersise
+To easy for you. implement Redux according to this post:
+
+https://gyver98.github.io/blog/development/react/2017/03/20/redux-tesla-battery-range-calculator-part2-english/
 
 ## Hints
 For more details, check out my post [Building Tesla's battery range calculator with React Part 1](https://gyver98.github.io/blog/development/react/2017/02/13/react-tesla-battery-range-calculator-part1-english/) 
