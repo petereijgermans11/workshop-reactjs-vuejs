@@ -147,7 +147,7 @@ found in
            <Root>
 
 
-See line 'tesla-battery.component' (HINT: v-model is missing):
+See line 'tesla-battery.component' (HINT: 'v-model' is missing):
 
 <tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" />
 
