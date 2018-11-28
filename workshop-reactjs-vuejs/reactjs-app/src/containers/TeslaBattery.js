@@ -60,7 +60,7 @@ class TeslaBattery extends React.Component {
     // update config state with new value
     title === 'Speed' ? config['speed'] = newValue : config['temperature'] = newValue;
     // update our state
-    this.setState({ config }, () => {this.statsUpdate()});
+    this.state.config = this.statsUpdate();
   }
 
   increment(e, title) {
@@ -135,8 +135,6 @@ class TeslaBattery extends React.Component {
             <TeslaCounter
               currentValue={this.state.config.temperature}
               initValues={this.props.counterDefaultVal.temperature}
-              increment={this.increment}
-              decrement={this.decrement}
             />
             <TeslaClimate
               value={this.state.config.climate}
@@ -145,7 +143,7 @@ class TeslaBattery extends React.Component {
             />
           </div>
           <TeslaWheels
-            value={this.state.config.wheels}
+            value={this}
             handleChangeWheels={this.handleChangeWheels}
           />
         </div>

@@ -1,4 +1,4 @@
-This is an tutorial for Rebuild Tesla's Battery Range Calculator with React.
+This is an tutorial for Rebuild Tesla's Battery Range Calculator with React!!!
 
 
 # Workshop ReactJS
@@ -29,28 +29,142 @@ Development Server is running on http://localhost:3000
 
 
 # ERROR 1:
+```bash
+warning.js:33 Warning: Failed prop type: Invalid prop `value` of type `object` supplied to `TeslaWheels`, expected `number`.
+    in TeslaWheels (at TeslaBattery.js:147)
+    in TeslaBattery (at App.js:28)
+    in div (at App.js:26)
+    in App (at index.js:7)
 
+See line 'TeslaBattery.js' (HINT: value is wrong):
 
+<TeslaWheels
+            value={this}
+            handleChangeWheels={this.handleChangeWheels}
+          />
+
+```
 
 ———————————
 
 # ERROR 2:
+```bash
+warning.js:33 Warning: Failed prop type: Invalid prop `wheelsize` of type `number` supplied to `TeslaCar`, expected `string`.
+    in TeslaCar (at TeslaBattery.js:125)
+    in TeslaBattery (at App.js:28)
+    in div (at App.js:26)
+    in App (at index.js:7)
 
+See line in the 'TeslaCar.js' (HINT: type is wrong):
+
+TeslaCar.propTypes = {
+  wheelsize: React.PropTypes.string
+}
+
+```
 
 ———--------
 
 # ERROR 3:
+```bash
+warning.js:33 Warning: flattenChildren(...): Encountered two children with the same key, `[object Object]`. Child keys must be unique; when two children share a key, only the first child will be used.
+    in ul (at TeslaStats.js:13)
+    in div (at TeslaStats.js:12)
+    in TeslaStats (at TeslaBattery.js:126)
+    in form (at TeslaBattery.js:123)
+    in TeslaBattery (at App.js:28)
+    in div (at App.js:26)
+    in App (at index.js:7)
 
+See line in the 'TeslaStats.js':
+
+ const listItems = props.carstats.map((stat) => (
+    <li key={stat}>
+      <div className={`tesla-stats-icon tesla-stats-icon--${stat.model.toLowerCase()}`}></div>
+      <p>{stat.miles}</p>
+    </li>
+  ));
+
+```
 
 ———————————
 
 # ERROR 4:
+```bash
+warning.js:33 Warning: Failed prop type: Invalid prop `handleChangeClimate` of type `function` supplied to `TeslaClimate`, expected `string`.
+    in TeslaClimate (at TeslaBattery.js:141)
+    in TeslaBattery (at App.js:28)
+    in div (at App.js:26)
+    in App (at index.js:7)
+
+See line in the 'TeslaClimate.js':
+
+TeslaClimate.propTypes = {
+  value: React.PropTypes.bool,
+  limit: React.PropTypes.bool,
+  handleChangeClimate: React.PropTypes.string
+}
+
+```
 
 
+# ERROR 5:
+```bash
+When you click op the 'Speed button', then you get the following error:
 
+warning.js:33 Warning: Unknown prop `click` on <button> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
+    in button (at TeslaCounter.js:14)
+    in div (at TeslaCounter.js:13)
+    in div (at TeslaCounter.js:8)
+    in div (at TeslaCounter.js:7)
+    in div (at TeslaCounter.js:5)
+    in TeslaCounter (at TeslaBattery.js:128)
+    in div (at TeslaBattery.js:127)
+    in form (at TeslaBattery.js:123)
+    in TeslaBattery (at App.js:28)
+    in div (at App.js:26)
+    in App (at index.js:7)
 
-# TODO:
+See line in the 'TeslaCounter.js':
 
+ <div className="tesla-counter__controls">
+          <button 
+            click={(e) => props.increment(e, props.initValues.title)} 
+            disabled={props.currentValue >= props.initValues.max} 
+          >
+          </button>
+          <button 
+            click={(e) => props.decrement(e, props.initValues.title)} 
+            disabled={props.currentValue <= props.initValues.min} 
+          >
+          </button>
+
+```
+
+# ERROR 6:
+```bash
+Make the climate button work:
+
+ <TeslaClimate
+              value={this.state.config.climate}
+              limit={this.state.config.temperature > 10}
+              handleChangeClimate={this.handleChangeClimate}
+            />
+```
+
+# ERROR 7:
+```bash
+
+'updateCounterState' does not work in 'TeslaBattery.js' (HINT: do NOT use this.state.config = this.statsUpdate(), to update the Counter State:
+
+ updateCounterState(title, newValue) {
+    const config = { ...this.state.config };
+    // update config state with new value
+    title === 'Speed' ? config['speed'] = newValue : config['temperature'] = newValue;
+    // update our state
+    this.state.config = this.statsUpdate();
+  }
+```
 
 
 ## Hints
