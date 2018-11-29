@@ -14,7 +14,12 @@ git clone https://github.com/petereijgermans11/workshop-reactjs-vuejs.git
 
 # If you'd rather use ReactJS
 
+-> goto this folder in the terminal: 
+
+cd workshop-reactjs-vuejs
 cd ./reactjs-app
+
+### Getting started
 npm install
 npm start
 
