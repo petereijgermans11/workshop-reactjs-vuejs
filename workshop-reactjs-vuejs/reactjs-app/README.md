@@ -20,6 +20,7 @@ cd workshop-reactjs-vuejs
 cd ./reactjs-app
 
 ### Getting started
+npm install node-gyp
 npm install
 npm start
 
@@ -184,13 +185,17 @@ Warning: Accessing PropTypes via the main React package is deprecated, and will 
 ```
 
 # Exersise 1
-Create the TeslaNotice.js component.
-All code which is marked as 'Exersise 1' in the TeslaBattery.js, should be placed in the TeslaNotice.js. 
-See the Header.js component.
+Fix the Wheels buttons. 
+Code marked as 'Exersise 1' in the TeslaWheels.js, should be fixed.
 
 # Exersise 2
+Create the TeslaNotice.js component.
+All code marked as 'Exersise 2' in the TeslaBattery.js, should be placed in the TeslaNotice.js. 
+See the Header.js component.
+
+# Exersise 3
 Create the TeslaStats.js component.
-All code which is marked as 'Exersise 2' in the TeslaBattery.js, should be placed in the TeslaStats.js.
+All code marked as 'Exersise 3' in the TeslaBattery.js, should be placed in the TeslaStats.js.
 Use 'carstats' as input property!
 
 # Exersise 3

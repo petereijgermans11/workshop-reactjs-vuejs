@@ -121,7 +121,7 @@ class TeslaBattery extends React.Component {
   render() {    
     const { config, carstats } = this.state;
 
-    // Exersise 2: put this in the TeslaStats.js 
+    // Exersise 3: put this in the TeslaStats.js 
     // and ERROR 3
     const listItems = carstats.map((stat) => (
       <li key={stat}>
@@ -135,7 +135,7 @@ class TeslaBattery extends React.Component {
         <h1>Range Per Charge</h1>
         <TeslaCar wheelsize={config.wheels} />
 
-        {/* Exersise 2: put this in the TeslaStats.js (in the return of the render()-method) */}
+        {/* Exersise 3: put this in the TeslaStats.js (in the return of the render()-method) */}
         <div className="tesla-stats">
             <ul>
                {listItems}  
@@ -168,7 +168,7 @@ class TeslaBattery extends React.Component {
           />
         </div>
         
-        {/* Exersise 1: put this in the TeslaNotice.js */}
+        {/* Exersise 2: put this in the TeslaNotice.js */}
         <div className="tesla-battery__notice">
           <p>
             The actual amount of range that you experience will vary based
