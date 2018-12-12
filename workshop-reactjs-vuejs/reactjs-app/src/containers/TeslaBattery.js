@@ -119,11 +119,27 @@ class TeslaBattery extends React.Component {
 
   render() {    
     const { config, carstats } = this.state;
+
+    // FIXME: put this in the TeslaStats.js 
+    const listItems = carstats.map((stat) => (
+      <li key={stat}>
+        <div className={`tesla-stats-icon tesla-stats-icon--${stat.model.toLowerCase()}`}></div>
+        <p>{stat.miles}</p>
+      </li>
+    ));
+
     return (
       <form className="tesla-battery">
         <h1>Range Per Charge</h1>
         <TeslaCar wheelsize={config.wheels} />
-        <TeslaStats carstats={carstats} />
+
+        // FIXME: put this in the TeslaStats.js (in the return of the render()-method)
+        <div className="tesla-stats">
+            <ul>
+               {listItems}  
+            </ul>
+        </div>
+
         <div className="tesla-controls cf">
           <TeslaCounter
             currentValue={this.state.config.speed}

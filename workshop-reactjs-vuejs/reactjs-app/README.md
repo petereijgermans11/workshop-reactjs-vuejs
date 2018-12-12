@@ -160,7 +160,9 @@ Make the climate button work:
 # ERROR 7:
 ```bash
 
-'updateCounterState' does not work in 'TeslaBattery.js' (HINT: do NOT use this.state.config = this.statsUpdate(), to update the Counter State:
+'updateCounterState' does not work in 'TeslaBattery.js' 
+(HINT: do NOT use this.state.config = this.statsUpdate(), to update the Counter State).
+(HINT: use: this.setState({}))
 
  updateCounterState(title, newValue) {
     const config = { ...this.state.config };
@@ -171,7 +173,17 @@ Make the climate button work:
   }
 ```
 
-# Exersise
+# Exersise 1
+Fix the warning:
+Warning: Accessing PropTypes via the main React package is deprecated, and will be removed in  React v16.0. Use the latest available v15.* prop-types package from npm instead. For info on usage, compatibility, migration and more, see https://fb.me/prop-types-docs
+
+
+# Exersise 2
+Make a TeslaStats.js component.
+All code which is marked as 'FIXME' in the TeslaBattery.js, should be placed in the TeslaStats.js.
+Use 'carstats' as input property!
+
+# Exersise 3
 To easy for you. implement Redux according to this post:
 
 https://gyver98.github.io/blog/development/react/2017/03/20/redux-tesla-battery-range-calculator-part2-english/
