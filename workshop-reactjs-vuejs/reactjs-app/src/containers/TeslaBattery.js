@@ -60,6 +60,7 @@ class TeslaBattery extends React.Component {
     // update config state with new value
     title === 'Speed' ? config['speed'] = newValue : config['temperature'] = newValue;
     // update our state
+    // ERROR 7
     this.state.config = this.statsUpdate();
   }
 
@@ -120,7 +121,8 @@ class TeslaBattery extends React.Component {
   render() {    
     const { config, carstats } = this.state;
 
-    // FIXME: put this in the TeslaStats.js 
+    // Exersise 2: put this in the TeslaStats.js 
+    // and ERROR 3
     const listItems = carstats.map((stat) => (
       <li key={stat}>
         <div className={`tesla-stats-icon tesla-stats-icon--${stat.model.toLowerCase()}`}></div>
@@ -133,7 +135,7 @@ class TeslaBattery extends React.Component {
         <h1>Range Per Charge</h1>
         <TeslaCar wheelsize={config.wheels} />
 
-        // FIXME: put this in the TeslaStats.js (in the return of the render()-method)
+        {/* Exersise 2: put this in the TeslaStats.js (in the return of the render()-method) */}
         <div className="tesla-stats">
             <ul>
                {listItems}  
@@ -147,6 +149,7 @@ class TeslaBattery extends React.Component {
             increment={this.increment}
             decrement={this.decrement}
           />
+          {/* ERROR 6 */}
           <div className="tesla-climate-container cf">
             <TeslaCounter
               currentValue={this.state.config.temperature}
@@ -158,6 +161,7 @@ class TeslaBattery extends React.Component {
               handleChangeClimate={this.handleChangeClimate}
             />
           </div>
+          {/* ERROR 1 */}
           <TeslaWheels
             value={this}
             handleChangeWheels={this.handleChangeWheels}

@@ -73,15 +73,9 @@ TeslaCar.propTypes = {
 # ERROR 3:
 ```bash
 warning.js:33 Warning: flattenChildren(...): Encountered two children with the same key, `[object Object]`. Child keys must be unique; when two children share a key, only the first child will be used.
-    in ul (at TeslaStats.js:13)
-    in div (at TeslaStats.js:12)
-    in TeslaStats (at TeslaBattery.js:126)
-    in form (at TeslaBattery.js:123)
-    in TeslaBattery (at App.js:28)
-    in div (at App.js:26)
-    in App (at index.js:7)
+    
 
-See line in the 'TeslaStats.js':
+See line in the 'TeslaBattery.js':
 
  const listItems = props.carstats.map((stat) => (
     <li key={stat}>
@@ -180,7 +174,7 @@ Warning: Accessing PropTypes via the main React package is deprecated, and will 
 
 # Exersise 2
 Make a TeslaStats.js component.
-All code which is marked as 'FIXME' in the TeslaBattery.js, should be placed in the TeslaStats.js.
+All code which is marked as 'Exersise 2' in the TeslaBattery.js, should be placed in the TeslaStats.js.
 Use 'carstats' as input property!
 
 # Exersise 3

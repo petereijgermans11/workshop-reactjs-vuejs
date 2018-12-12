@@ -10,6 +10,7 @@ const TeslaCar = (props) => (
   </div>
 );
 
+ //ERROR 2 
 TeslaCar.propTypes = {
   wheelsize: React.PropTypes.string
 }

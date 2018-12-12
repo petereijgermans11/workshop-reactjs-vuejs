@@ -18,6 +18,7 @@ const TeslaClimate = (props) => (
   </div>
 );
 
+// ERROR 4
 TeslaClimate.propTypes = {
   value: React.PropTypes.bool,
   limit: React.PropTypes.bool,

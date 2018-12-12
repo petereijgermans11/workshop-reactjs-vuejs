@@ -11,6 +11,7 @@ const TeslaCounter = (props) => (
           <span>{ props.initValues.unit }</span>
         </p>
         <div className="tesla-counter__controls">
+         {/* ERROR 5 */}
           <button 
             click={(e) => props.increment(e, props.initValues.title)} 
             disabled={props.currentValue >= props.initValues.max} 

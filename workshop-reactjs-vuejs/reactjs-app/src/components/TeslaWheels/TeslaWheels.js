@@ -12,7 +12,7 @@ const LabelLists = (props) => {
         name="wheelsize"
         value={size}
         checked={value === size} 
-        onChange={() => {changeHandler(size)}} />
+        change={() => {changeHandler(size)}} />
       <p>
         {size}"
       </p>
