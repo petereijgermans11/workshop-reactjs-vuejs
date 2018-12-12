@@ -175,13 +175,21 @@ Make the climate button work:
 
 ```
 
-# Exersise 1
+# ERROR 9
+```bash
+
 Fix the warning:
 Warning: Accessing PropTypes via the main React package is deprecated, and will be removed in  React v16.0. Use the latest available v15.* prop-types package from npm instead. For info on usage, compatibility, migration and more, see https://fb.me/prop-types-docs
 
+```
+
+# Exersise 1
+Create the TeslaNotice.js component.
+All code which is marked as 'Exersise 1' in the TeslaBattery.js, should be placed in the TeslaNotice.js. 
+See the Header.js component.
 
 # Exersise 2
-Make a TeslaStats.js component.
+Create the TeslaStats.js component.
 All code which is marked as 'Exersise 2' in the TeslaBattery.js, should be placed in the TeslaStats.js.
 Use 'carstats' as input property!
 
