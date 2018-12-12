@@ -167,6 +167,14 @@ Make the climate button work:
   }
 ```
 
+# ERROR 8:
+```bash
+
+ Unknown prop `change` on <input> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
+    in input (at TeslaWheels.js:10)
+
+```
+
 # Exersise 1
 Fix the warning:
 Warning: Accessing PropTypes via the main React package is deprecated, and will be removed in  React v16.0. Use the latest available v15.* prop-types package from npm instead. For info on usage, compatibility, migration and more, see https://fb.me/prop-types-docs
