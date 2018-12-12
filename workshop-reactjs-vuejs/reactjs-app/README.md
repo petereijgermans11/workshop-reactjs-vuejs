@@ -78,7 +78,7 @@ warning.js:33 Warning: flattenChildren(...): Encountered two children with the s
 
 See line in the 'TeslaBattery.js':
 
- const listItems = props.carstats.map((stat) => (
+ const listItems = carstats.map((stat) => (
     <li key={stat}>
       <div className={`tesla-stats-icon tesla-stats-icon--${stat.model.toLowerCase()}`}></div>
       <p>{stat.miles}</p>
