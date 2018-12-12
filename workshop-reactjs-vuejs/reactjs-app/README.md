@@ -191,14 +191,14 @@ Code marked as 'Exersise 1' in the TeslaWheels.js, should be fixed.
 # Exersise 2
 Create the TeslaNotice.js component.
 All code marked as 'Exersise 2' in the TeslaBattery.js, should be placed in the TeslaNotice.js. 
-See the Header.js component.
+HINT: See the Header.js component.
 
 # Exersise 3
 Create the TeslaStats.js component.
 All code marked as 'Exersise 3' in the TeslaBattery.js, should be placed in the TeslaStats.js.
 Use 'carstats' as input property!
 
-# Exersise 3
+# Exersise 4
 To easy for you. implement Redux according to this post:
 
 https://gyver98.github.io/blog/development/react/2017/03/20/redux-tesla-battery-range-calculator-part2-english/
