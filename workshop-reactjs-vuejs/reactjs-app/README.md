@@ -30,11 +30,11 @@ Development Server is running on http://localhost:3000
 # Happy hacking ! ;-)
 ```
 
-## Todo:
+# Todo
 - Fix all the bugs before building new features
 
 
-# ERROR 1:
+# ERROR 1
 ```bash
 warning.js:33 Warning: Failed prop type: Invalid prop `value` of type `object` supplied to `TeslaWheels`, expected `number`.
     in TeslaWheels (at TeslaBattery.js:147)
@@ -51,9 +51,8 @@ See line 'TeslaBattery.js' (HINT: value is wrong):
 
 ```
 
-———————————
 
-# ERROR 2:
+# ERROR 2
 ```bash
 warning.js:33 Warning: Failed prop type: Invalid prop `wheelsize` of type `number` supplied to `TeslaCar`, expected `string`.
     in TeslaCar (at TeslaBattery.js:125)
@@ -69,9 +68,8 @@ TeslaCar.propTypes = {
 
 ```
 
-———--------
 
-# ERROR 3:
+# ERROR 3
 ```bash
 warning.js:33 Warning: flattenChildren(...): Encountered two children with the same key, `[object Object]`. Child keys must be unique; when two children share a key, only the first child will be used.
     
@@ -87,9 +85,8 @@ See line in the 'TeslaBattery.js':
 
 ```
 
-———————————
 
-# ERROR 4:
+# ERROR 4
 ```bash
 warning.js:33 Warning: Failed prop type: Invalid prop `handleChangeClimate` of type `function` supplied to `TeslaClimate`, expected `string`.
     in TeslaClimate (at TeslaBattery.js:141)
@@ -108,7 +105,7 @@ TeslaClimate.propTypes = {
 ```
 
 
-# ERROR 5:
+# ERROR 5
 ```bash
 When you click op the 'Speed button', then you get the following error:
 
@@ -141,7 +138,7 @@ See line in the 'TeslaCounter.js':
 
 ```
 
-# ERROR 6:
+# ERROR 6
 ```bash
 Make the climate button work:
 
@@ -152,7 +149,7 @@ Make the climate button work:
             />
 ```
 
-# ERROR 7:
+# ERROR 7
 ```bash
 
 'updateCounterState' does not work in 'TeslaBattery.js' 
@@ -168,7 +165,7 @@ Make the climate button work:
   }
 ```
 
-# ERROR 8:
+# ERROR 8
 ```bash
 
  Unknown prop `change` on <input> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
