@@ -131,7 +131,7 @@ See 'tesla-climate.component'
 # ERROR 6
 ```bash
 
-When you click on the 'Speed button', then you get the following error:
+When you click on the 'Speed UP button', then you get the following error:
 
 Uncaught ReferenceError: increment is not defined
     at HTMLButtonElement.onclick ((index):17)
@@ -145,7 +145,7 @@ Uncaught ReferenceError: increment is not defined
 
 # ERROR 7
 ```bash
-When you click on the 'Speed button' again, then you get the following error:
+When you click on the 'Speed UP button' again, then you get the following error:
 
 tesla-counter.component.vue?d8fb:64 Uncaught TypeError: this.emit is not a function
     at VueComponent.increment
@@ -262,8 +262,17 @@ Or change the properties of this component.
 ```
 
 # Exercise 8
+```bash
 
-Unittest some components with Vue-Jest 
+Disable the ArrowDown/ArrowUP icon for 'speed-button' or 'outside temparature-button',
+when reached the min or max 
+```
+
+# Exercise 9
+```bash
+
+Unittest some components with Vue-Jest
+```
 
 # Final Exercise:
 

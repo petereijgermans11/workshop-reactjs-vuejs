@@ -8,8 +8,8 @@
           <span>{{ unit }}</span>
         </p>
         <div class="tesla-counter__controls" tabindex="-1">
-          <button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
-          <button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
+          <button tabindex="-1" type="button" onclick="increment" :enabled="value === max"></button>
+          <button tabindex="-1" type="button" onclick="decrement" :enabled="value === min"></button>
         </div>
       </div>
     </div>
