@@ -265,7 +265,8 @@ Or change the properties of this component.
 ```bash
 
 Disable the ArrowDown/ArrowUP icon for 'speed-button' or 'outside temparature-button',
-when reached the min or max 
+when the min or max is reached
+
 ```
 
 # Exercise 9
