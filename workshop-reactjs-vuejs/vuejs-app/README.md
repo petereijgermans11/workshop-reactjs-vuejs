@@ -72,7 +72,7 @@ found in:
 
 ---> <TeslaStats> at src/tesla-battery/components/tesla-stats.component.vue
 
-see 'tesla-stats.component' (HINT: the :key is wrong):
+see 'tesla-stats.component' (HINT: the ':key' is wrong):
 
 <li v-for="stat in stats" :key="model">
        
