@@ -45,6 +45,7 @@ Please: fix all the bugs before building new features
 
 # ERROR 1:
 ```bash
+
 Property or method "wheels" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
 
 found in
@@ -62,10 +63,6 @@ See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
 # ERROR 2:
 ```bash
 
- ``` 
-
-# ERROR 3:
-```bash
 [Vue warn]: Property or method "model" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
 
 found in:
@@ -78,8 +75,24 @@ see 'tesla-stats.component' (HINT: the ':key' is wrong):
        
 ```
 
+# ERROR 3
+
+Invalid prop: type check failed for prop "value". Expected String, got Boolean.
+
+found in
+
+---> <TeslaClimate> at src/tesla-battery/components/tesla-climate.component.vue
+       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
+         <App> at src/App.vue
+           <Root>
+
+See 'tesla-climate.component' (HINT: the 'value' type is wrong in props):
+
+
+
 # ERROR 4:
 ```bash
+
 Invalid prop: type check failed for prop "onClick". Expected String, got Function.
 
 found in
@@ -89,26 +102,14 @@ found in
          <App> at src/App.vue
            <Root>
 
-See 'tesla-climate.component' (HINT: the onClick type is wrong):
+See 'tesla-climate.component' (HINT: the onClick type is wrong in props):
 
- props: {
-    limit: {
-      type: Boolean,
-      required: true,
-    },
-    value: {
-      type: Boolean,
-      required: true,
-    },
-    onClick: {
-      type: String,
-      required: true,
-    },
-  },
+
 ```
 
 # ERROR 5:
 ```bash
+
 When you click op the 'Speed button', then you get the following error:
 
 Uncaught ReferenceError: increment is not defined
@@ -146,15 +147,15 @@ See line 'tesla-battery.component' (HINT: 'v-model' is missing):
 Create the 'tesla-header.component' for showing the tesla 'logo'.
 Define 'greeting' as input property!
 
- HINT: See the slides for the solution.
+HINT: See the slides for the solution.
 
  ``` 
 
  # Exercise 2:
  ```bash
  
- Create the 'tesla-car.component' for showing the tesla-car.
- Define 'wheels' and 'speed' as input properties!
+Create the 'tesla-car.component' for showing the tesla-car.
+Define 'wheels' and 'speed' as input properties!
 
 Finally import the 'tesla-car.component' in the 'tesla-battery.component' (alias: TeslaCar)
 And define the TeslaCar in the components-section of the 'tesla-battery.component'.
@@ -183,7 +184,10 @@ filters: {
 
 HINT: fix the decrement function:
 
- decrement() {}
+ decrement() {
+   ...<FIXME>...
+ }
+
  ```
  
 
@@ -193,7 +197,6 @@ HINT: fix the decrement function:
 - 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
 
 HINT: add the 'ArrowDown' handler:
-
 
    onKeyUp(event) {
       ...<FIXME>...

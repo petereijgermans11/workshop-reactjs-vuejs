@@ -17,7 +17,7 @@ export default {
       required: true,
     },
     value: {
-      type: Boolean,
+      type: String,
       required: true,
     },
     onClick: {
