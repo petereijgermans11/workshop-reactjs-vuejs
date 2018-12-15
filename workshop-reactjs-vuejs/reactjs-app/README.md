@@ -203,7 +203,7 @@ Use 'carstats' as input property!
 # Exersise 4
 ```bash
 
-Convert miles to kilometer in TeslaStats.js 
+Convert 'miles' to 'kilometers' in TeslaStats.js 
 ```
 
 # Exersise 5
