@@ -131,7 +131,7 @@ See 'tesla-climate.component' (HINT: the onClick type is wrong in props):
 # ERROR 6:
 ```bash
 
-When you click op the 'Speed button', then you get the following error:
+When you click on the 'Speed button', then you get the following error:
 
 Uncaught ReferenceError: increment is not defined
     at HTMLButtonElement.onclick ((index):17)
@@ -153,9 +153,10 @@ The 'stats()' function in the 'tesla-battery.component' does change when the use
 HINT: do not use array.filter()
 
 Extra info:
-tesla-battery.component stats()-function (for calculating the maximum battery range). This function returns: an array of battery numerical value objects ​by car model according to the currently selected value (wheelzise – climate – speed - temparature)
+tesla-battery.component stats()-function is for calculating the maximum battery range per model. 
+This range is based on the user input (wheelzise – climate – speed - temparature)
 
-This is the JSON-format what the stats()-function should return:
+This is the JSON-format what the stats()-function should return per model:
 
 [
   {"model":"60","miles":267},
