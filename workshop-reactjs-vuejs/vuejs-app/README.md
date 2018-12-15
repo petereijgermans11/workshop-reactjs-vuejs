@@ -172,6 +172,14 @@ This is the JSON-format what the stats()-function should return per model:
 # Exercise 1:
 ```bash
 
+Make the climate button work.
+It is always on. 
+
+ ```
+
+# Exercise 2:
+```bash
+
 - decrement speed/temparature does not work (in the tesla-counter.component).
 
 HINT: fix the decrement function:
@@ -183,7 +191,7 @@ HINT: fix the decrement function:
  ```
 
 
-# Exercise 2:
+# Exercise 3:
 ```bash
 
 Create the 'tesla-header.component' for showing the tesla 'logo'.
@@ -193,18 +201,27 @@ HINT: See the slides for the solution.
 
  ``` 
 
- # Exercise 3:
+ # Exercise 4:
  ```bash
  
 Create the 'tesla-car.component' for showing the tesla-car.
 Define 'wheels' and 'speed' as input properties!
+
+Move this from the TeslaBattery.js to the TeslaCar.js and place it in the 'template':
+
+   <div class="tesla-car">
+        <div class="tesla-wheels">
+            <div :class="`tesla-wheel tesla-wheel--front tesla-wheel--${tesla.wheels}--${tesla.speed}`"></div>
+            <div :class="`tesla-wheel tesla-wheel--rear tesla-wheel--${tesla.wheels}--${tesla.speed}`"></div>
+        </div>
+    </div>
 
 Finally import the 'tesla-car.component' in the 'tesla-battery.component' (alias: TeslaCar)
 And define the TeslaCar in the components-section of the 'tesla-battery.component'.
 
  ``` 
 
-# Exercise 4:
+# Exercise 5:
 ```bash
 
 - write a custom 'filter' to translate Miles to km (in the tesla-stats.component)
@@ -219,7 +236,7 @@ filters: {
 }
 ``` 
 
-# Exercise 5:
+# Exercise 6:
 ```bash
 
 - 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).

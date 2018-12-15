@@ -2,6 +2,7 @@
   <form class="tesla-battery">
     <h1>{{ title }}</h1>
 
+
     <div class="tesla-car">
         <div class="tesla-wheels">
             <div :class="`tesla-wheel tesla-wheel--front tesla-wheel--${tesla.wheels}--${tesla.speed}`"></div>
@@ -66,7 +67,7 @@ export default {
       stats() {
       return this.tesla_models.filter(model => {
         const {speed, temperature, climate, wheels} = this.tesla;
-        const miles = this.models[model][wheels][climate ? 'on' : 'off'].speed[
+        const miles = this.models[model][wheels][climate ? 'on' : 'on'].speed[
           speed
         ][temperature];
         return {
