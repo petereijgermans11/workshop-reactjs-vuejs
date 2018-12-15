@@ -36,6 +36,7 @@ Development Server is running on http://localhost:3000
 
 # ERROR 1
 ```bash
+
 warning.js:33 Warning: Failed prop type: Invalid prop `value` of type `object` supplied to `TeslaWheels`, expected `number`.
     in TeslaWheels (at TeslaBattery.js:147)
     in TeslaBattery (at App.js:28)
@@ -54,6 +55,7 @@ See line 'TeslaBattery.js' (HINT: value is wrong):
 
 # ERROR 2
 ```bash
+
 warning.js:33 Warning: Failed prop type: Invalid prop `wheelsize` of type `number` supplied to `TeslaCar`, expected `string`.
     in TeslaCar (at TeslaBattery.js:125)
     in TeslaBattery (at App.js:28)
@@ -71,6 +73,7 @@ TeslaCar.propTypes = {
 
 # ERROR 3
 ```bash
+
 warning.js:33 Warning: flattenChildren(...): Encountered two children with the same key, `[object Object]`. Child keys must be unique; when two children share a key, only the first child will be used.
     
 
@@ -88,6 +91,7 @@ See line in the 'TeslaBattery.js':
 
 # ERROR 4
 ```bash
+
 warning.js:33 Warning: Failed prop type: Invalid prop `handleChangeClimate` of type `function` supplied to `TeslaClimate`, expected `string`.
     in TeslaClimate (at TeslaBattery.js:141)
     in TeslaBattery (at App.js:28)
@@ -107,6 +111,7 @@ TeslaClimate.propTypes = {
 
 # ERROR 5
 ```bash
+
 When you click op the 'Speed button', then you get the following error:
 
 warning.js:33 Warning: Unknown prop `click` on <button> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
@@ -174,12 +179,14 @@ Warning: Accessing PropTypes via the main React package is deprecated, and will 
 
 # Exersise 1
 ```bash
+
 Fix the Wheels buttons. 
 Code marked as 'Exersise 1' in the TeslaWheels.js, should be fixed.
 ```
 
 # Exersise 2
 ```bash
+
 Create the TeslaNotice.js component.
 All code marked as 'Exersise 2' in the TeslaBattery.js, should be placed in the TeslaNotice.js. 
 HINT: See the Header.js component.
@@ -187,6 +194,7 @@ HINT: See the Header.js component.
 
 # Exersise 3
 ```bash
+
 Create the TeslaStats.js component.
 All code marked as 'Exersise 3' in the TeslaBattery.js, should be placed in the TeslaStats.js.
 Use 'carstats' as input property!
@@ -194,9 +202,18 @@ Use 'carstats' as input property!
 
 # Exersise 4
 ```bash
+
+Convert miles to kilometer in TeslaStats.js 
+```
+
+# Exersise 5
+```bash
+
 Make the climate button work!
 Code marked as 'Exersise 4' in the TeslaBattery.js, should be fixed.
 ```
+
+
 
 # Final Exersise 
 To easy for you. implement Redux according to this post:
