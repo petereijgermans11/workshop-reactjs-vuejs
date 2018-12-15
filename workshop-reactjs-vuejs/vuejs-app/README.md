@@ -38,9 +38,10 @@ The tesla-battery.component: Provides data and actions to presentational compone
 # Happy coding ! ;-)
 ```
 
-
+# TO DO
 Please: fix all the bugs before building new features
-
+And download the Vue Devtools extension for a better development experience:
+https://github.com/vuejs/vue-devtools
 
 
 # ERROR 1:
@@ -75,55 +76,7 @@ see 'tesla-stats.component' (HINT: the ':key' is wrong):
        
 ```
 
-# ERROR 3
-```bash
-
-Invalid prop: type check failed for prop "value". Expected String, got Boolean.
-
-found in
-
----> <TeslaClimate> at src/tesla-battery/components/tesla-climate.component.vue
-       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
-         <App> at src/App.vue
-           <Root>
-
-See 'tesla-climate.component' (HINT: the 'value' type is wrong in props):
-
-```
-
-# ERROR 4:
-```bash
-
-Invalid prop: type check failed for prop "onClick". Expected String, got Function.
-
-found in
-
----> <TeslaClimate> at src/tesla-battery/components/tesla-climate.component.vue
-       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
-         <App> at src/App.vue
-           <Root>
-
-See 'tesla-climate.component' (HINT: the onClick type is wrong in props):
-
-
-```
-
-# ERROR 5:
-```bash
-
-When you click op the 'Speed button', then you get the following error:
-
-Uncaught ReferenceError: increment is not defined
-    at HTMLButtonElement.onclick ((index):17)
-
-
- See 'tesla-counter.component' (HINT: the onclick-event is wrong):
-
-<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
-<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
-```
-
-# ERROR 6:
+# ERROR 3:
 ```bash
 
 Missing required prop: "value"
@@ -142,15 +95,94 @@ See line 'tesla-battery.component' (HINT: 'v-model' is missing):
 
 ```       
 
+# ERROR 4
+```bash
+
+Invalid prop: type check failed for prop "value". Expected String, got Boolean.
+
+found in
+
+---> <TeslaClimate> at src/tesla-battery/components/tesla-climate.component.vue
+       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
+         <App> at src/App.vue
+           <Root>
+
+See 'tesla-climate.component' (HINT: the 'value' type is wrong in props):
+
+```
+
+# ERROR 5:
+```bash
+
+Invalid prop: type check failed for prop "onClick". Expected String, got Function.
+
+found in
+
+---> <TeslaClimate> at src/tesla-battery/components/tesla-climate.component.vue
+       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
+         <App> at src/App.vue
+           <Root>
+
+See 'tesla-climate.component' (HINT: the onClick type is wrong in props):
+
+
+```
+
+# ERROR 6:
+```bash
+
+When you click op the 'Speed button', then you get the following error:
+
+Uncaught ReferenceError: increment is not defined
+    at HTMLButtonElement.onclick ((index):17)
+
+
+ See 'tesla-counter.component' (HINT: the onclick-event is wrong):
+
+<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
+<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
+```
+
+
+
 # ERROR 7:
 ```bash
 
-The 'stats()' function does not return any data.
-Fix this first.
+The 'stats()' function in the 'tesla-battery.component' does change when the user input changes (wheelzise – climate – speed - temparature).
+
+HINT: do not use array.filter()
+
+Extra info:
+tesla-battery.component stats()-function (for calculating the maximum battery range). This function returns: an array of battery numerical value objects ​by car model according to the currently selected value (wheelzise – climate – speed - temparature)
+
+This is the JSON-format what the stats()-function should return:
+
+[
+  {"model":"60","miles":267},
+  {"model":"60D","miles":271},
+  {"model":"75","miles":323},
+  {"model":"75D","miles":332},
+  {"model":"90D","miles":365},
+  {"model":"P100D","miles":409}
+]
 
 ```  
 
 # Exercise 1:
+```bash
+
+- decrement speed/temparature does not work (in the tesla-counter.component).
+
+HINT: fix the decrement function:
+
+ decrement() {
+   ...<FIXME>...
+ }
+
+ ```
+
+
+# Exercise 2:
 ```bash
 
 Create the 'tesla-header.component' for showing the tesla 'logo'.
@@ -160,7 +192,7 @@ HINT: See the slides for the solution.
 
  ``` 
 
- # Exercise 2:
+ # Exercise 3:
  ```bash
  
 Create the 'tesla-car.component' for showing the tesla-car.
@@ -171,7 +203,7 @@ And define the TeslaCar in the components-section of the 'tesla-battery.componen
 
  ``` 
 
-# Exercise 3:
+# Exercise 4:
 ```bash
 
 - write a custom 'filter' to translate Miles to km (in the tesla-stats.component)
@@ -184,21 +216,7 @@ HINT: add the translation from Miles to km
 filters: {
    ...<FIXME>...
 }
-```
-
-# Exercise 4:
-```bash
-
-- decrement speed does not work (in the tesla-counter.component).
-
-HINT: fix the decrement function:
-
- decrement() {
-   ...<FIXME>...
- }
-
- ```
- 
+``` 
 
 # Exercise 5:
 ```bash
