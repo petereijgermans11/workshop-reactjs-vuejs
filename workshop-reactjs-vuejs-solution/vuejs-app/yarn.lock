@@ -7185,6 +7185,10 @@ vue-loader@^14.1.1:
     vue-style-loader "^4.0.1"
     vue-template-es2015-compiler "^1.6.0"
 
+vue-niege@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/vue-niege/-/vue-niege-0.1.1.tgz#fa5358e503ba8cd831da0ae1a1f99497e61a4f70"
+
 vue-style-loader@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.0.2.tgz#e89aa4702a0c6b9630d8de70b1cbddb06b9ad254"

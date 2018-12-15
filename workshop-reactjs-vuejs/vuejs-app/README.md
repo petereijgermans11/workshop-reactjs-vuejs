@@ -55,7 +55,7 @@ found in
        <App> at src/App.vue
          <Root>
 
-See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
+See line 'tesla-battery.component':
 
          '<tesla-wheels v-model="wheels" />'
 
@@ -70,7 +70,7 @@ found in:
 
 ---> <TeslaStats> at src/tesla-battery/components/tesla-stats.component.vue
 
-see 'tesla-stats.component' (HINT: the ':key' is wrong):
+see 'tesla-stats.component':
 
 <li v-for="stat in stats" :key="model">
        
@@ -89,7 +89,7 @@ found in
            <Root>
 
 
-See line 'tesla-battery.component' (HINT: 'v-model' is missing):
+See line 'tesla-battery.component' (HINT: 'v-model' directive is missing):
 
 <tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" />
 
@@ -107,7 +107,7 @@ found in
          <App> at src/App.vue
            <Root>
 
-See 'tesla-climate.component' (HINT: the 'value' type is wrong in props):
+See 'tesla-climate.component'
 
 ```
 
@@ -123,7 +123,7 @@ found in
          <App> at src/App.vue
            <Root>
 
-See 'tesla-climate.component' (HINT: the onClick type is wrong in props):
+See 'tesla-climate.component'
 
 
 ```
@@ -137,7 +137,7 @@ Uncaught ReferenceError: increment is not defined
     at HTMLButtonElement.onclick ((index):17)
 
 
- See 'tesla-counter.component' (HINT: the onclick-event is wrong):
+ See 'tesla-counter.component':
 
 <button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
 <button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
@@ -149,8 +149,6 @@ Uncaught ReferenceError: increment is not defined
 ```bash
 
 The 'stats()' function in the 'tesla-battery.component' does change when the user input changes (wheelzise – climate – speed - temparature).
-
-HINT: do not use array.filter()
 
 Extra info:
 tesla-battery.component stats()-function is for calculating the maximum battery range per model. 
@@ -180,9 +178,9 @@ It is always on.
 # Exercise 2
 ```bash
 
-- decrement speed/temparature does not work (in the tesla-counter.component).
+Decrement speed/temparature does not work (in the tesla-counter.component).
 
-HINT: fix the decrement function:
+Fix the decrement function:
 
  decrement() {
    ...<FIXME>...
@@ -207,7 +205,7 @@ HINT: See the slides for the solution.
 Create the 'tesla-car.component' for showing the tesla-car.
 Define 'wheels' and 'speed' as input properties!
 
-Move this from the TeslaBattery.js to the TeslaCar.js and place it in the 'template':
+Move this code from the TeslaBattery.js to the TeslaCar.js and place it in the '<template>-section':
 
    <div class="tesla-car">
         <div class="tesla-wheels">
@@ -217,35 +215,40 @@ Move this from the TeslaBattery.js to the TeslaCar.js and place it in the 'templ
     </div>
 
 Finally import the 'tesla-car.component' in the 'tesla-battery.component' (alias: TeslaCar)
-And define the TeslaCar in the components-section of the 'tesla-battery.component'.
+And define the TeslaCar in the 'components-section' of the 'tesla-battery.component'.
 
  ``` 
 
 # Exercise 5
 ```bash
 
-- write a custom 'filter' to translate Miles to km (in the tesla-stats.component)
+Write a custom 'filter' with the name 'km', to translate Miles to km (in the tesla-stats.component)
 
-HINT: add the translation from Miles to km
-
-   {{stat.miles | km}}
-
-
-filters: {
-   ...<FIXME>...
-}
+  filters: {
+    ...<FIXME>...
+  }
 ``` 
 
 # Exercise 6
 ```bash
 
-- 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
-
-HINT: add the 'ArrowDown' handler:
+The 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
 
    onKeyUp(event) {
       ...<FIXME>...
    }
+
+```
+
+# Exercise 7
+```bash
+
+Add the Vue component to add a snowfall on your page.
+
+    https://github.com/P3trur0/vue-niege
+
+And change the background color, so you can see the snow (tesla-style.css)
+Or change the properties of this component.
 
 ```
 

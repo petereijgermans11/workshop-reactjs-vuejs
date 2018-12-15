@@ -38,13 +38,15 @@ The tesla-battery.component: Provides data and actions to presentational compone
 # Happy coding ! ;-)
 ```
 
-
+# TO DO
 Please: fix all the bugs before building new features
+And download the Vue Devtools extension for a better development experience:
+https://github.com/vuejs/vue-devtools
 
 
-
-# ERROR 1:
+# ERROR 1
 ```bash
+
 Property or method "wheels" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
 
 found in
@@ -53,91 +55,31 @@ found in
        <App> at src/App.vue
          <Root>
 
-See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
+See line 'tesla-battery.component':
+
          '<tesla-wheels v-model="wheels" />'
 
 ```
 
-# ERROR 2:
+# ERROR 2
 ```bash
-Invalid prop: type check failed for prop "wheelsize". Expected String, got Number.
 
-
-found in
-
----> <TeslaCar> at src/tesla-battery/components/tesla-car.component.vue
-       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
-         <App> at src/App.vue
-           <Root>
-
-See line in the 'tesla-car.component' (HINT: type is wrong):
- 
-  props: {
-    wheelsize: {
-      type: String,
-      required: true,
-    },
- ``` 
-
-# ERROR 3:
-```bash
-[Vue warn]: Property or method "model" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+Property or method "model" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
 
 found in:
 
 ---> <TeslaStats> at src/tesla-battery/components/tesla-stats.component.vue
 
-see 'tesla-stats.component' (HINT: the :key is wrong)
+see 'tesla-stats.component':
+
 <li v-for="stat in stats" :key="model">
        
 ```
 
-# ERROR 4:
-```bash
-Invalid prop: type check failed for prop "onClick". Expected String, got Function.
-
-found in
-
----> <TeslaClimate> at src/tesla-battery/components/tesla-climate.component.vue
-       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
-         <App> at src/App.vue
-           <Root>
-
-See 'tesla-climate.component' (HINT: the onClick type is wrong):
-
- props: {
-    limit: {
-      type: Boolean,
-      required: true,
-    },
-    value: {
-      type: Boolean,
-      required: true,
-    },
-    onClick: {
-      type: String,
-      required: true,
-    },
-  },
-```
-
-# ERROR 5:
-```bash
-When you click op the 'Speed button', then you get the following error:
-
-Uncaught ReferenceError: increment is not defined
-    at HTMLButtonElement.onclick ((index):17)
-
-
- See 'tesla-counter.component' (HINT: the onclick-event is wrong):
-<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
-<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
-```
-
-# ERROR 6:
+# ERROR 3
 ```bash
 
-vue.runtime.esm.js?ff9b:574 [Vue warn]: Missing required prop: "value"
+Missing required prop: "value"
 
 found in
 
@@ -147,47 +89,150 @@ found in
            <Root>
 
 
-See line 'tesla-battery.component' (HINT: v-model is missing):
+See line 'tesla-battery.component' (HINT: 'v-model' directive is missing):
 
 <tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" />
 
-```         
+```       
 
-# Exercise 1:
- Create the 'tesla-header.component' for showing the tesla 'logo'.
- HINT: See the slides for the solution.
-
-# Exercise 2:
-- write a custom 'filter' for translation Miles to km (in the tesla-stats.component)
-
+# ERROR 4
 ```bash
-HINT: add the translation from Miles to km
 
-   {{stat.miles | km}}
+Invalid prop: type check failed for prop "value". Expected String, got Boolean.
 
+found in
 
-filters: {
-   ...<FIXME>...
-}
+---> <TeslaClimate> at src/tesla-battery/components/tesla-climate.component.vue
+       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
+         <App> at src/App.vue
+           <Root>
+
+See 'tesla-climate.component'
+
 ```
 
-# Exercise 3:
-- decrement speed does not work (in the tesla-counter.component).
-
+# ERROR 5
 ```bash
-HINT: fix the decrement function:
 
- decrement() {}
+Invalid prop: type check failed for prop "onClick". Expected String, got Function.
+
+found in
+
+---> <TeslaClimate> at src/tesla-battery/components/tesla-climate.component.vue
+       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
+         <App> at src/App.vue
+           <Root>
+
+See 'tesla-climate.component'
+
+
+```
+
+# ERROR 6
+```bash
+
+When you click on the 'Speed button', then you get the following error:
+
+Uncaught ReferenceError: increment is not defined
+    at HTMLButtonElement.onclick ((index):17)
+
+
+ See 'tesla-counter.component':
+
+<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
+<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
+```
+
+
+
+# ERROR 7
+```bash
+
+The 'stats()' function in the 'tesla-battery.component' does change when the user input changes (wheelzise – climate – speed - temparature).
+
+Extra info:
+tesla-battery.component stats()-function is for calculating the maximum battery range per model. 
+This range is based on the user input (wheelzise – climate – speed - temparature)
+
+This is the JSON-format what the stats()-function should return per model:
+
+[
+  {"model":"60","miles":267},
+  {"model":"60D","miles":271},
+  {"model":"75","miles":323},
+  {"model":"75D","miles":332},
+  {"model":"90D","miles":365},
+  {"model":"P100D","miles":409}
+]
+
+```  
+
+# Exercise 1
+```bash
+
+Make the climate button work.
+It is always on. 
+
  ```
- 
 
-# Exercise 4:
-- 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
-See the 'onKeyUp' function ():
-
+# Exercise 2
 ```bash
-HINT: add the 'ArrowDown' handler:
 
+Decrement speed/temparature does not work (in the tesla-counter.component).
+
+Fix the decrement function:
+
+ decrement() {
+   ...<FIXME>...
+ }
+
+ ```
+
+
+# Exercise 3
+```bash
+
+Create the 'tesla-header.component' for showing the tesla 'logo'.
+Define 'greeting' as input property!
+
+HINT: See the slides for the solution.
+
+ ``` 
+
+ # Exercise 4
+ ```bash
+ 
+Create the 'tesla-car.component' for showing the tesla-car.
+Define 'wheels' and 'speed' as input properties!
+
+Move this code from the TeslaBattery.js to the TeslaCar.js and place it in the '<template>-section':
+
+   <div class="tesla-car">
+        <div class="tesla-wheels">
+            <div :class="`tesla-wheel tesla-wheel--front tesla-wheel--${tesla.wheels}--${tesla.speed}`"></div>
+            <div :class="`tesla-wheel tesla-wheel--rear tesla-wheel--${tesla.wheels}--${tesla.speed}`"></div>
+        </div>
+    </div>
+
+Finally import the 'tesla-car.component' in the 'tesla-battery.component' (alias: TeslaCar)
+And define the TeslaCar in the 'components-section' of the 'tesla-battery.component'.
+
+ ``` 
+
+# Exercise 5
+```bash
+
+Write a custom 'filter' with the name 'km', to translate Miles to km (in the tesla-stats.component)
+
+  filters: {
+    ...<FIXME>...
+  }
+``` 
+
+# Exercise 6
+```bash
+
+The 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
 
    onKeyUp(event) {
       ...<FIXME>...
@@ -195,6 +240,18 @@ HINT: add the 'ArrowDown' handler:
 
 ```
 
-# Exercise 5:
+# Exercise 7
+```bash
+
+Add the Vue component to add a snowfall on your page.
+
+    https://github.com/P3trur0/vue-niege
+
+And change the background color, so you can see the snow (tesla-style.css)
+Or change the properties of this component.
+
+```
+
+# Final Exercise:
 
 Too easy for you? Use Vuex to manage the state of your app :)

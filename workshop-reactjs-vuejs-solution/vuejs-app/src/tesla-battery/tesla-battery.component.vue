@@ -1,6 +1,7 @@
 <template>
   <form class="tesla-battery">
     <h1>{{ title }}</h1>
+    <Snow/>
     <tesla-car :wheelsize="tesla.wheels" :speed="tesla.speed" />
     <tesla-stats :stats="stats" />
     <div class="tesla-controls cf">
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+import Snow from 'vue-niege';
 import TeslaCar from './components/tesla-car.component';
 import TeslaClimate from './components/tesla-climate.component';
 import TeslaCounter from './components/tesla-counter.component';
@@ -34,6 +36,7 @@ import teslaService from './tesla-battery.service';
 export default {
   name: 'tesla-battery',
   components: {
+    Snow,
     TeslaCar,
     TeslaClimate,
     TeslaCounter,

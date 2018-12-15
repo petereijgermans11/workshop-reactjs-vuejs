@@ -210,9 +210,17 @@ Convert 'miles' to 'kilometers' in TeslaStats.js
 ```bash
 
 Make the climate button work!
-Code marked as 'Exersise 4' in the TeslaBattery.js, should be fixed.
+Code marked as 'Exersise 5' in the TeslaBattery.js, should be fixed.
 ```
 
+# Exersize 6
+
+Add the React component to add a snowfall on your page.
+
+https://github.com/burakcan/react-snowstorm
+
+And change the background color, so you can see the snow (tesla-style.css)
+Or change the properties of this component.
 
 
 # Final Exersise 
