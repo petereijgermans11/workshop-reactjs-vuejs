@@ -143,9 +143,16 @@ Uncaught ReferenceError: increment is not defined
 <button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
 ```
 
-
-
 # ERROR 7
+```bash
+When you click on the 'Speed button' again, then you get the following error:
+
+tesla-counter.component.vue?d8fb:64 Uncaught TypeError: this.emit is not a function
+    at VueComponent.increment
+  
+```
+
+# ERROR 8
 ```bash
 
 The 'stats()' function in the 'tesla-battery.component' does change when the user input changes (wheelzise – climate – speed - temparature).
@@ -166,6 +173,8 @@ This is the JSON-format what the stats()-function should return per model:
 ]
 
 ```  
+
+
 
 # Exercise 1
 ```bash

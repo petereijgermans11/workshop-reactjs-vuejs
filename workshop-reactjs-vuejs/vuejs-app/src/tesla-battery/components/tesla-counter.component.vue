@@ -60,7 +60,7 @@ export default {
   methods: {
     increment() {
       if (this.value < this.max) {
-        this.$emit('input', this.value + this.step);
+        this.emit('input', this.value + this.step);
       }
     },
     decrement() {},
