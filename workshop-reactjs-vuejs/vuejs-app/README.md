@@ -76,6 +76,7 @@ see 'tesla-stats.component' (HINT: the ':key' is wrong):
 ```
 
 # ERROR 3
+```bash
 
 Invalid prop: type check failed for prop "value". Expected String, got Boolean.
 
@@ -88,7 +89,7 @@ found in
 
 See 'tesla-climate.component' (HINT: the 'value' type is wrong in props):
 
-
+```
 
 # ERROR 4:
 ```bash
