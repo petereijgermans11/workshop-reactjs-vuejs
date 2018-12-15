@@ -63,7 +63,7 @@ See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
 # ERROR 2:
 ```bash
 
-[Vue warn]: Property or method "model" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+Property or method "model" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
 
 found in:
 
@@ -125,7 +125,7 @@ Uncaught ReferenceError: increment is not defined
 # ERROR 6:
 ```bash
 
-vue.runtime.esm.js?ff9b:574 [Vue warn]: Missing required prop: "value"
+Missing required prop: "value"
 
 found in
 
