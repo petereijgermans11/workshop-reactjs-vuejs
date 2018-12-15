@@ -210,7 +210,7 @@ Convert 'miles' to 'kilometers' in TeslaStats.js
 ```bash
 
 Make the climate button work!
-Code marked as 'Exersise 4' in the TeslaBattery.js, should be fixed.
+Code marked as 'Exersise 5' in the TeslaBattery.js, should be fixed.
 ```
 
 # Exersize 6

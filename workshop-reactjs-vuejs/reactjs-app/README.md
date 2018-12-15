@@ -37,13 +37,13 @@ Development Server is running on http://localhost:3000
 # ERROR 1
 ```bash
 
-warning.js:33 Warning: Failed prop type: Invalid prop `value` of type `object` supplied to `TeslaWheels`, expected `number`.
+Failed prop type: Invalid prop `value` of type `object` supplied to `TeslaWheels`, expected `number`.
     in TeslaWheels (at TeslaBattery.js:147)
     in TeslaBattery (at App.js:28)
     in div (at App.js:26)
     in App (at index.js:7)
 
-See line 'TeslaBattery.js' (HINT: value is wrong):
+See line 'TeslaBattery.js':
 
 <TeslaWheels
             value={this}
@@ -56,13 +56,13 @@ See line 'TeslaBattery.js' (HINT: value is wrong):
 # ERROR 2
 ```bash
 
-warning.js:33 Warning: Failed prop type: Invalid prop `wheelsize` of type `number` supplied to `TeslaCar`, expected `string`.
+Failed prop type: Invalid prop `wheelsize` of type `number` supplied to `TeslaCar`, expected `string`.
     in TeslaCar (at TeslaBattery.js:125)
     in TeslaBattery (at App.js:28)
     in div (at App.js:26)
     in App (at index.js:7)
 
-See line in the 'TeslaCar.js' (HINT: type is wrong):
+See line in the 'TeslaCar.js':
 
 TeslaCar.propTypes = {
   wheelsize: React.PropTypes.string
@@ -74,7 +74,7 @@ TeslaCar.propTypes = {
 # ERROR 3
 ```bash
 
-warning.js:33 Warning: flattenChildren(...): Encountered two children with the same key, `[object Object]`. Child keys must be unique; when two children share a key, only the first child will be used.
+flattenChildren(...): Encountered two children with the same key, `[object Object]`. Child keys must be unique; when two children share a key, only the first child will be used.
     
 
 See line in the 'TeslaBattery.js':
@@ -92,7 +92,7 @@ See line in the 'TeslaBattery.js':
 # ERROR 4
 ```bash
 
-warning.js:33 Warning: Failed prop type: Invalid prop `handleChangeClimate` of type `function` supplied to `TeslaClimate`, expected `string`.
+Failed prop type: Invalid prop `handleChangeClimate` of type `function` supplied to `TeslaClimate`, expected `string`.
     in TeslaClimate (at TeslaBattery.js:141)
     in TeslaBattery (at App.js:28)
     in div (at App.js:26)
@@ -114,7 +114,7 @@ TeslaClimate.propTypes = {
 
 When you click op the 'Speed button', then you get the following error:
 
-warning.js:33 Warning: Unknown prop `click` on <button> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
+Unknown prop `click` on <button> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
     in button (at TeslaCounter.js:14)
     in div (at TeslaCounter.js:13)
     in div (at TeslaCounter.js:8)
@@ -150,7 +150,6 @@ See line in the 'TeslaCounter.js':
 
 'updateCounterState' does not work in 'TeslaBattery.js' 
 (HINT: do NOT use this.state.config = this.statsUpdate(), to update the Counter State).
-(HINT use: this.setState({}))
 
  updateCounterState(title, newValue) {
     const config = { ...this.state.config };
@@ -189,7 +188,7 @@ Code marked as 'Exersise 1' in the TeslaWheels.js, should be fixed.
 
 Create the TeslaNotice.js component.
 All code marked as 'Exersise 2' in the TeslaBattery.js, should be placed in the TeslaNotice.js. 
-HINT: See the Header.js component.
+HINT: See also the Header.js component.
 ```
 
 # Exersise 3
@@ -215,7 +214,7 @@ Code marked as 'Exersise 5' in the TeslaBattery.js, should be fixed.
 
 # Exersize 6
 
-Add the React component to add a snowfall on your page.
+Add this React component to add a snowfall on your page.
 
 https://github.com/burakcan/react-snowstorm
 

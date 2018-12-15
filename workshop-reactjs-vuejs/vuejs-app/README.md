@@ -243,7 +243,7 @@ The 'Arrow down' does not work when the focus is on it (in the tesla-counter.com
 # Exercise 7
 ```bash
 
-Add the Vue component to add a snowfall on your page.
+Add this Vue component to add a snowfall on your page.
 
     https://github.com/P3trur0/vue-niege
 
