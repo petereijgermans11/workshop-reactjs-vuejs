@@ -44,7 +44,7 @@ And download the Vue Devtools extension for a better development experience:
 https://github.com/vuejs/vue-devtools
 
 
-# ERROR 1:
+# ERROR 1
 ```bash
 
 Property or method "wheels" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
@@ -61,7 +61,7 @@ See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
 
 ```
 
-# ERROR 2:
+# ERROR 2
 ```bash
 
 Property or method "model" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
@@ -76,7 +76,7 @@ see 'tesla-stats.component' (HINT: the ':key' is wrong):
        
 ```
 
-# ERROR 3:
+# ERROR 3
 ```bash
 
 Missing required prop: "value"
@@ -111,7 +111,7 @@ See 'tesla-climate.component' (HINT: the 'value' type is wrong in props):
 
 ```
 
-# ERROR 5:
+# ERROR 5
 ```bash
 
 Invalid prop: type check failed for prop "onClick". Expected String, got Function.
@@ -128,7 +128,7 @@ See 'tesla-climate.component' (HINT: the onClick type is wrong in props):
 
 ```
 
-# ERROR 6:
+# ERROR 6
 ```bash
 
 When you click on the 'Speed button', then you get the following error:
@@ -145,7 +145,7 @@ Uncaught ReferenceError: increment is not defined
 
 
 
-# ERROR 7:
+# ERROR 7
 ```bash
 
 The 'stats()' function in the 'tesla-battery.component' does change when the user input changes (wheelzise – climate – speed - temparature).
@@ -169,7 +169,7 @@ This is the JSON-format what the stats()-function should return per model:
 
 ```  
 
-# Exercise 1:
+# Exercise 1
 ```bash
 
 Make the climate button work.
@@ -177,7 +177,7 @@ It is always on.
 
  ```
 
-# Exercise 2:
+# Exercise 2
 ```bash
 
 - decrement speed/temparature does not work (in the tesla-counter.component).
@@ -191,7 +191,7 @@ HINT: fix the decrement function:
  ```
 
 
-# Exercise 3:
+# Exercise 3
 ```bash
 
 Create the 'tesla-header.component' for showing the tesla 'logo'.
@@ -201,7 +201,7 @@ HINT: See the slides for the solution.
 
  ``` 
 
- # Exercise 4:
+ # Exercise 4
  ```bash
  
 Create the 'tesla-car.component' for showing the tesla-car.
@@ -221,7 +221,7 @@ And define the TeslaCar in the components-section of the 'tesla-battery.componen
 
  ``` 
 
-# Exercise 5:
+# Exercise 5
 ```bash
 
 - write a custom 'filter' to translate Miles to km (in the tesla-stats.component)
@@ -236,7 +236,7 @@ filters: {
 }
 ``` 
 
-# Exercise 6:
+# Exercise 6
 ```bash
 
 - 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
