@@ -138,23 +138,14 @@ See line in the 'TeslaCounter.js':
 
 ```
 
+
+
 # ERROR 6
-```bash
-Make the climate button work:
-
- <TeslaClimate
-              value={this.state.config.climate}
-              limit={this.state.config.temperature > 10}
-              handleChangeClimate={this.handleChangeClimate}
-            />
-```
-
-# ERROR 7
 ```bash
 
 'updateCounterState' does not work in 'TeslaBattery.js' 
 (HINT: do NOT use this.state.config = this.statsUpdate(), to update the Counter State).
-(HINT: use: this.setState({}))
+(HINT use: this.setState({}))
 
  updateCounterState(title, newValue) {
     const config = { ...this.state.config };
@@ -165,7 +156,7 @@ Make the climate button work:
   }
 ```
 
-# ERROR 8
+# ERROR 7
 ```bash
 
  Unknown prop `change` on <input> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
@@ -173,7 +164,7 @@ Make the climate button work:
 
 ```
 
-# ERROR 9
+# ERROR 8
 ```bash
 
 Fix the warning:
@@ -182,20 +173,32 @@ Warning: Accessing PropTypes via the main React package is deprecated, and will 
 ```
 
 # Exersise 1
+```bash
 Fix the Wheels buttons. 
 Code marked as 'Exersise 1' in the TeslaWheels.js, should be fixed.
+```
 
 # Exersise 2
+```bash
 Create the TeslaNotice.js component.
 All code marked as 'Exersise 2' in the TeslaBattery.js, should be placed in the TeslaNotice.js. 
 HINT: See the Header.js component.
+```
 
 # Exersise 3
+```bash
 Create the TeslaStats.js component.
 All code marked as 'Exersise 3' in the TeslaBattery.js, should be placed in the TeslaStats.js.
 Use 'carstats' as input property!
+```
 
 # Exersise 4
+```bash
+Make the climate button work!
+Code marked as 'Exersise 4' in the TeslaBattery.js, should be fixed.
+```
+
+# Final Exersise 
 To easy for you. implement Redux according to this post:
 
 https://gyver98.github.io/blog/development/react/2017/03/20/redux-tesla-battery-range-calculator-part2-english/

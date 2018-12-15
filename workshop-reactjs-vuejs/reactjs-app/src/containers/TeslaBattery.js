@@ -60,7 +60,7 @@ class TeslaBattery extends React.Component {
     // update config state with new value
     title === 'Speed' ? config['speed'] = newValue : config['temperature'] = newValue;
     // update our state
-    // ERROR 7
+    // ERROR 6
     this.state.config = this.statsUpdate();
   }
 
@@ -149,7 +149,7 @@ class TeslaBattery extends React.Component {
             increment={this.increment}
             decrement={this.decrement}
           />
-          {/* ERROR 6 */}
+          {/* Exersise 4: Make the climate button work */}
           <div className="tesla-climate-container cf">
             <TeslaCounter
               currentValue={this.state.config.temperature}
