@@ -54,29 +54,14 @@ found in
          <Root>
 
 See line 'tesla-battery.component' (HINT: v-model="wheels" is wrong):
+
          '<tesla-wheels v-model="wheels" />'
 
 ```
 
 # ERROR 2:
 ```bash
-Invalid prop: type check failed for prop "wheelsize". Expected String, got Number.
 
-
-found in
-
----> <TeslaCar> at src/tesla-battery/components/tesla-car.component.vue
-       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
-         <App> at src/App.vue
-           <Root>
-
-See line in the 'tesla-car.component' (HINT: type is wrong):
- 
-  props: {
-    wheelsize: {
-      type: String,
-      required: true,
-    },
  ``` 
 
 # ERROR 3:
@@ -87,7 +72,8 @@ found in:
 
 ---> <TeslaStats> at src/tesla-battery/components/tesla-stats.component.vue
 
-see 'tesla-stats.component' (HINT: the :key is wrong)
+see 'tesla-stats.component' (HINT: the :key is wrong):
+
 <li v-for="stat in stats" :key="model">
        
 ```
@@ -130,6 +116,7 @@ Uncaught ReferenceError: increment is not defined
 
 
  See 'tesla-counter.component' (HINT: the onclick-event is wrong):
+
 <button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
 <button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
 ```
@@ -154,13 +141,31 @@ See line 'tesla-battery.component' (HINT: 'v-model' is missing):
 ```         
 
 # Exercise 1:
- Create the 'tesla-header.component' for showing the tesla 'logo'.
+```bash
+
+Create the 'tesla-header.component' for showing the tesla 'logo'.
+Define 'greeting' as input property!
+
  HINT: See the slides for the solution.
 
-# Exercise 2:
-- write a custom 'filter' for translation Miles to km (in the tesla-stats.component)
+ ``` 
 
+ # Exercise 2:
+ ```bash
+ 
+ Create the 'tesla-car.component' for showing the tesla-car.
+ Define 'wheels' and 'speed' as input properties!
+
+Finally import the 'tesla-car.component' in the 'tesla-battery.component' (alias: TeslaCar)
+And define the TeslaCar in the components-section of the 'tesla-battery.component'.
+
+ ``` 
+
+# Exercise 3:
 ```bash
+
+- write a custom 'filter' to translate Miles to km (in the tesla-stats.component)
+
 HINT: add the translation from Miles to km
 
    {{stat.miles | km}}
@@ -171,21 +176,22 @@ filters: {
 }
 ```
 
-# Exercise 3:
+# Exercise 4:
+```bash
+
 - decrement speed does not work (in the tesla-counter.component).
 
-```bash
 HINT: fix the decrement function:
 
  decrement() {}
  ```
  
 
-# Exercise 4:
-- 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
-See the 'onKeyUp' function ():
-
+# Exercise 5:
 ```bash
+
+- 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
+
 HINT: add the 'ArrowDown' handler:
 
 
@@ -195,6 +201,6 @@ HINT: add the 'ArrowDown' handler:
 
 ```
 
-# Exercise 5:
+# Final Exercise:
 
 Too easy for you? Use Vuex to manage the state of your app :)

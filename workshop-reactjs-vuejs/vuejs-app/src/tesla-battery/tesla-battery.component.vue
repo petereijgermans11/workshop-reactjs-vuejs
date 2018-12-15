@@ -1,7 +1,16 @@
 <template>
   <form class="tesla-battery">
     <h1>{{ title }}</h1>
-    <tesla-car :wheelsize="tesla.wheels" :speed="tesla.speed" />
+
+    <div class="tesla-car">
+        <div class="tesla-wheels">
+            <div :class="`tesla-wheel tesla-wheel--front tesla-wheel--${tesla.wheels}--${tesla.speed}`"></div>
+            <div :class="`tesla-wheel tesla-wheel--rear tesla-wheel--${tesla.wheels}--${tesla.speed}`"></div>
+        </div>
+    </div>
+
+
+
     <tesla-stats :stats="stats" />
     <div class="tesla-controls cf">
       <tesla-counter title="Speed" unit="kmh" :step="5" :min="45" :max="70" v-model="tesla.speed" />
@@ -23,7 +32,6 @@
 </template>
 
 <script>
-import TeslaCar from './components/tesla-car.component';
 import TeslaClimate from './components/tesla-climate.component';
 import TeslaCounter from './components/tesla-counter.component';
 import TeslaStats from './components/tesla-stats.component';
@@ -34,7 +42,6 @@ import teslaService from './tesla-battery.service';
 export default {
   name: 'tesla-battery',
   components: {
-    TeslaCar,
     TeslaClimate,
     TeslaCounter,
     TeslaStats,
