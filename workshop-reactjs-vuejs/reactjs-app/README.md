@@ -197,6 +197,22 @@ HINT: See also the Header.js component.
 Create the TeslaStats.js component.
 All code marked as 'Exersise 3' in the TeslaBattery.js, should be placed in the TeslaStats.js.
 Use 'carstats' as input property!
+
+HINT:
+carstats contains the following JSON-format:
+It contains the maximum battery range per model.
+This range is based on the user input (wheelzise – climate – speed - temparature).
+
+[
+  {"model":"60","miles":267},
+  {"model":"60D","miles":271},
+  {"model":"75","miles":323},
+  {"model":"75D","miles":332},
+  {"model":"90D","miles":365},
+  {"model":"P100D","miles":409}
+]
+
+
 ```
 
 # Exersise 4

@@ -152,7 +152,7 @@ The 'stats()' function in the 'tesla-battery.component' does change when the use
 
 Extra info:
 tesla-battery.component stats()-function is for calculating the maximum battery range per model. 
-This range is based on the user input (wheelzise – climate – speed - temparature)
+This range is based on the user input (wheelzise – climate – speed - temparature).
 
 This is the JSON-format what the stats()-function should return per model:
 
@@ -251,6 +251,10 @@ And change the background color, so you can see the snow (tesla-style.css)
 Or change the properties of this component.
 
 ```
+
+# Exercise 8
+
+Unittest some components with Vue-Jest 
 
 # Final Exercise:
 
