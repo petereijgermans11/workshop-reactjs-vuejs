@@ -140,7 +140,15 @@ See line 'tesla-battery.component' (HINT: 'v-model' is missing):
 
 <tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" />
 
-```         
+```       
+
+# ERROR 7:
+```bash
+
+The 'stats()' function does not return any data.
+Fix this first.
+
+```  
 
 # Exercise 1:
 ```bash
