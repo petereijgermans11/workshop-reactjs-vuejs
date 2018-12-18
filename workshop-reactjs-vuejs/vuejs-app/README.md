@@ -197,8 +197,13 @@ Fix the decrement function:
 
  ```
 
-
 # Exercise 3
+```bash
+
+Create the 'tesla-notice.component' for showing the bottom text.
+```
+
+# Exercise 4
 ```bash
 
 Create the 'tesla-header.component' for showing the tesla 'logo'.
@@ -208,7 +213,7 @@ HINT: See the slides for the solution.
 
  ``` 
 
- # Exercise 4
+ # Exercise 5
  ```bash
  
 Create the 'tesla-car.component' for showing the tesla-car.
@@ -228,7 +233,7 @@ And define the TeslaCar in the 'components-section' of the 'tesla-battery.compon
 
  ``` 
 
-# Exercise 5
+# Exercise 6
 ```bash
 
 Write a custom 'filter' with the name 'km', to translate Miles to km (in the tesla-stats.component)
@@ -238,7 +243,7 @@ Write a custom 'filter' with the name 'km', to translate Miles to km (in the tes
   }
 ``` 
 
-# Exercise 6
+# Exercise 7
 ```bash
 
 The 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
@@ -249,7 +254,7 @@ The 'Arrow down' does not work when the focus is on it (in the tesla-counter.com
 
 ```
 
-# Exercise 7
+# Exercise 8
 ```bash
 
 Add this Vue component to add a snowfall on your page.
@@ -257,11 +262,16 @@ Add this Vue component to add a snowfall on your page.
     https://github.com/P3trur0/vue-niege
 
 And change the background color, so you can see the snow (tesla-style.css)
-Or change the properties of this component.
-
+Change the properties of this component.
 ```
 
-# Exercise 8
+# Exercise 9
+```bash
+
+Use transition/animation to move the car
+```
+
+# Exercise 10
 ```bash
 
 Disable the ArrowDown/ArrowUP icon for 'speed-button' or 'outside temparature-button',
@@ -269,7 +279,7 @@ when the min or max is reached
 
 ```
 
-# Exercise 9
+# Exercise 11
 ```bash
 
 Unittest some components with Vue-Jest
