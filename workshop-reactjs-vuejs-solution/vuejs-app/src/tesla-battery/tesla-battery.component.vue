@@ -1,7 +1,7 @@
 <template>
   <form class="tesla-battery">
     <h1>{{ title }}</h1>
-    <Snow/>
+    <Snow :color="color"/>
     <tesla-car :wheelsize="tesla.wheels" :speed="tesla.speed" />
     <tesla-stats :stats="stats" />
     <div class="tesla-controls cf">
@@ -45,6 +45,7 @@ export default {
   },
   data() {
     return {
+      color: "#0000ff",
       title: 'Ranger Per Charge',
       results: ['60', '60D', '75', '75D', '90D', 'P100D'],
       tesla: {
