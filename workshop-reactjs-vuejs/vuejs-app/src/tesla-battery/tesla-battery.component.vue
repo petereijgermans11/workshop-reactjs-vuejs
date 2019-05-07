@@ -65,7 +65,7 @@ export default {
       return teslaService.getModelData();
     },
       stats() {
-      return this.tesla_models.filter(model => {
+      return this.tesla_models.map(model => {
         const {speed, temperature, climate, wheels} = this.tesla;
         const miles = this.models[model][wheels][climate ? 'on' : 'on'].speed[
           speed
