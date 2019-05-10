@@ -24,6 +24,12 @@ npm install node-gyp
 npm install
 npm start
 
+or
+
+npm install yarn -g
+yarn
+yarn start
+
 Development Server is running on http://localhost:3000
 
 
