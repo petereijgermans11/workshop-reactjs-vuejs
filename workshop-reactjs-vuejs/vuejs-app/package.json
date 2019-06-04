@@ -8,21 +8,36 @@
     "lint": "vue-cli-service lint",
     "format": "prettier --write 'src/**/*.js'",
     "format:vue": "prettier --write 'src/**/*.vue'",
-    "precommit": "lint-staged"
   },
   "dependencies": {
     "node-sass": "^4.7.2",
-    "vue": "^2.5.13"
+    "vue": "^2.6.10",
+    "vue-niege": "^0.1.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.2",
-    "@vue/cli-plugin-eslint": "^3.0.0-beta.2",
-    "@vue/cli-service": "^3.0.0-beta.2",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "@vue/eslint-config-standard": "^4.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
     "prettier": "^1.11.1",
     "sass-loader": "^6.0.6",
-    "vue-template-compiler": "^2.5.13"
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
   },
   "babel": {
     "presets": [

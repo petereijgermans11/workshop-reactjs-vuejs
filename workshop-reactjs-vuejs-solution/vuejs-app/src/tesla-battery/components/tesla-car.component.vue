@@ -13,13 +13,13 @@ export default {
   props: {
     wheelsize: {
       type: Number,
-      required: true,
+      required: true
     },
     speed: {
       type: Number,
-      required: true,
-    },
+      required: true
+    }
   },
-  created() {},
+  created () {}
 };
 </script>
