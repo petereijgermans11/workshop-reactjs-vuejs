@@ -1,5 +1,6 @@
 import React from 'react';
 import './TeslaCar.css';
+import PropTypes from 'prop-types';
 
 const TeslaCar = (props) => (
   <div className="tesla-car">
@@ -12,7 +13,7 @@ const TeslaCar = (props) => (
 
  //ERROR 2 
 TeslaCar.propTypes = {
-  wheelsize: React.PropTypes.string
+  wheelsize: PropTypes.string
 }
 
 export default TeslaCar;
