@@ -162,8 +162,10 @@ See line in the 'TeslaCounter.js':
     // update config state with new value
     title === 'Speed' ? config['speed'] = newValue : config['temperature'] = newValue;
     // update our state
-    this.state.config = this.statsUpdate();
+    this.state.config = this.statsUpdate();   ---> SHOULD BE: this.setState({ config }, () => {this.statsUpdate()}); 
   }
+
+  Read also : https://reactjs.org/docs/state-and-lifecycle.html
 ```
 
 # ERROR 7
@@ -174,7 +176,7 @@ See line in the 'TeslaCounter.js':
 
 ```
 
-# ERROR 8
+# ERROR 8 (OPTIONAL)
 ```bash
 
 Fix the warning:

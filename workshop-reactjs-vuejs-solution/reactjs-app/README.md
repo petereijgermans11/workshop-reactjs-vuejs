@@ -26,7 +26,7 @@ npm start
 
 or
 
-npm install yarn -g
+npm i yarn -g
 yarn
 yarn start
 
