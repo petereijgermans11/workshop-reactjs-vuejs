@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "node-sass": "^4.7.2",
-    "vue": "^2.6.10",
+    "vue": "^2.6.11",
     "vue-niege": "^0.1.1"
   },
   "devDependencies": {
@@ -23,7 +23,7 @@
     "lint-staged": "^7.0.0",
     "prettier": "^1.11.1",
     "sass-loader": "^6.0.6",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
