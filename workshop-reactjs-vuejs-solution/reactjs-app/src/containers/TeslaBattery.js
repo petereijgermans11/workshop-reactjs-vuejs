@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './TeslaBattery.css';
 import TeslaNotice from '../components/TeslaNotice/TeslaNotice';
 import TeslaCar from '../components/TeslaCar/TeslaCar';
@@ -8,30 +8,22 @@ import TeslaClimate from '../components/TeslaClimate/TeslaClimate';
 import TeslaWheels from '../components/TeslaWheels/TeslaWheels';
 import { getModelData } from '../services/BatteryService';
 
-class TeslaBattery extends React.Component {
-  constructor(props) {
-    super(props);
+function TeslaBattery (props) {
 
-    this.calculateStats = this.calculateStats.bind(this);
-    this.statsUpdate = this.statsUpdate.bind(this);
-    this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
-    this.updateCounterState = this.updateCounterState.bind(this);
-    this.handleChangeClimate = this.handleChangeClimate.bind(this);
-    this.handleChangeWheels = this.handleChangeWheels.bind(this);
+  const [carstats,setCarstats] = useState([]);
+  const [config,setConfig] = useState({
+    speed: 55,
+    temperature: 20,
+    climate: true,
+    wheels: 19
+   });
 
-    this.state = {
-      carstats: [],
-      config: {
-        speed: 55,
-        temperature: 20,
-        climate: true,
-        wheels: 19
-      }
-    }
-  }
+   useEffect(()=>{
+    statsUpdate();
+    // eslint-disable-next-line
+  },[config])
 
-  calculateStats = (models, value) => {
+  const calculateStats = (models, value) => {
     const dataModels = getModelData();
     return models.map(model => {
       const { speed, temperature, climate, wheels } = value;
@@ -43,82 +35,76 @@ class TeslaBattery extends React.Component {
     });
   }
 
-  statsUpdate() {
+  const statsUpdate = () => {
     const carModels = ['60', '60D', '75', '75D', '90D', 'P100D'];
     // Fetch model info from BatteryService and calculate then update state
-    this.setState({
-      carstats: this.calculateStats(carModels, this.state.config)
-    })
+    setCarstats(calculateStats(carModels, config));
   }
 
-  componentDidMount() {
-    this.statsUpdate();
-  }
-
-  updateCounterState(title, newValue) {
-    const config = { ...this.state.config };
+  const updateCounterState = (title, newValue) => {
+    const config_ = { ...config };
     // update config state with new value
-    title === 'Speed' ? config['speed'] = newValue : config['temperature'] = newValue;
+    title === 'Speed' ? config_['speed'] = newValue : config_['temperature'] = newValue;
     // update our state
-    this.setState({ config }, () => {this.statsUpdate()});
+    setConfig(config_);
   }
 
-  increment(e, title) {
+  const increment = (e, title) => {
     e.preventDefault();
     let currentValue, maxValue, step;
-    const { speed, temperature } = this.props.counterDefaultVal;
+    const { speed, temperature } = props.counterDefaultVal;
     if (title === 'Speed') {
-      currentValue = this.state.config.speed;
+      currentValue = config.speed;
       maxValue = speed.max;
       step = speed.step;
     } else {
-      currentValue = this.state.config.temperature;
+      currentValue = config.temperature;
       maxValue = temperature.max;
       step = temperature.step;
     }
 
     if (currentValue < maxValue) {
       const newValue = currentValue + step;
-      this.updateCounterState(title, newValue);
+      updateCounterState(title, newValue);
     }
   }
 
-  decrement(e, title) {
+  const decrement = (e, title) => {
     e.preventDefault();
     let currentValue, minValue, step;
-    const { speed, temperature } = this.props.counterDefaultVal;
+    const { speed, temperature } = props.counterDefaultVal;
     if (title === 'Speed') {
-      currentValue = this.state.config.speed;
+      currentValue = config.speed;
       minValue = speed.min;
       step = speed.step;
     } else {
-      currentValue = this.state.config.temperature;
+      currentValue = config.temperature;
       minValue = temperature.min;
       step = temperature.step;
     }
 
     if (currentValue > minValue) {
       const newValue = currentValue - step;
-      this.updateCounterState(title, newValue);
+      updateCounterState(title, newValue);
     }
   }
 
   // handle aircon & heating click event handler
-  handleChangeClimate() {
-    const config = {...this.state.config};
-    config['climate'] = !this.state.config.climate;
-    this.setState({ config }, () => {this.statsUpdate()});
+  const handleChangeClimate = () => {
+    const config_ = {...config};
+    config_['climate'] = !config_.climate;
+    // update our state
+    setConfig(config_);
   }
 
   // handle Wheels click event handler
-  handleChangeWheels(size) {
-    const config = {...this.state.config};
-    config['wheels'] = size;
-    this.setState({ config }, () => {this.statsUpdate()});
+  const handleChangeWheels = (size) => {
+    const config_ = {...config};
+    config_['wheels'] = size;
+    // update our state
+    setConfig(config_);
   }  
 
-  render() {    
-    const { config, carstats } = this.state;
     return (
       <form className="tesla-battery">
         <h1>Range Per Charge</h1>
@@ -126,33 +112,32 @@ class TeslaBattery extends React.Component {
         <TeslaStats carstats={carstats} />
         <div className="tesla-controls cf">
           <TeslaCounter
-            currentValue={this.state.config.speed}
-            initValues={this.props.counterDefaultVal.speed}
-            increment={this.increment}
-            decrement={this.decrement}
+            currentValue={config.speed}
+            initValues={props.counterDefaultVal.speed}
+            increment={increment}
+            decrement={decrement}
           />
           <div className="tesla-climate-container cf">
             <TeslaCounter
-              currentValue={this.state.config.temperature}
-              initValues={this.props.counterDefaultVal.temperature}
-              increment={this.increment}
-              decrement={this.decrement}
+              currentValue={config.temperature}
+              initValues={props.counterDefaultVal.temperature}
+              increment={increment}
+              decrement={decrement}
             />
             <TeslaClimate
-              value={this.state.config.climate}
-              limit={this.state.config.temperature > 10}
-              handleChangeClimate={this.handleChangeClimate}
+              value={config.climate}
+              limit={config.temperature > 10}
+              handleChangeClimate={handleChangeClimate}
             />
           </div>
           <TeslaWheels
-            value={this.state.config.wheels}
-            handleChangeWheels={this.handleChangeWheels}
+            value={config.wheels}
+            handleChangeWheels={handleChangeWheels}
           />
         </div>
         <TeslaNotice />
       </form>
     )
-  }
 }
 
 export default TeslaBattery;
