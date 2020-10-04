@@ -245,6 +245,10 @@ https://github.com/burakcan/react-snowstorm
 And change the background color, so you can see the snow (tesla-style.css)
 Or change the properties of this component.
 
+# Exersize 7
+Convert the TeslaBattery.js component to a Functional component with React hooks.
+See my article @DzoneInc, how to do this:  https://dzone.com/articles/steps-to-convert-the-react-tesla-battery-range-calc-to-func-comp-with-hooks
+
 
 # Final Exersise 
 To easy for you. implement Redux according to this post:
