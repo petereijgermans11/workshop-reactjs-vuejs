@@ -15,10 +15,8 @@ export default {
       required: true,
     }
   },
-  data() {
-      return {
-          logo
-      };
-  }
+  data: () => ({
+     logo
+  })
 };
 </script>

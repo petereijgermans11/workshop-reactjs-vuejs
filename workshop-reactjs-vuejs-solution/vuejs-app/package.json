@@ -9,21 +9,22 @@
     "format": "prettier --write 'src/**/*.js'",
     "format:vue": "prettier --write 'src/**/*.vue'"
   },
+
   "dependencies": {
-    "node-sass": "^4.7.2",
-    "vue": "^2.6.11",
+    "node-sass": "^4.14.0",
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0-0",
     "vue-niege": "^0.1.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.8.0",
-    "@vue/cli-plugin-eslint": "^3.8.0",
-    "@vue/cli-service": "^3.8.0",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.0",
-    "prettier": "^1.11.1",
-    "sass-loader": "^6.0.6",
-    "vue-template-compiler": "^2.6.11"
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0-0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0-0",
+    "sass-loader": "^10.0.0"
   },
   "eslintConfig": {
     "root": true,
@@ -31,43 +32,17 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "@vue/standard"
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
     ],
-    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
-    }
-  },
-  "babel": {
-    "presets": [
-      "@vue/app"
-    ]
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
+    },
+    "rules": {}
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 8"
-  ],
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "npm run lint",
-      "git add"
-    ],
-    "*.vue": [
-      "prettier --write",
-      "npm run lint",
-      "git add"
-    ],
-    "*.{css,scss,json,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  }
+    "not dead"
+  ]
 }

@@ -2,8 +2,8 @@
   <div class="tesla-stats">
     <ul>
       <li v-for="stat in stats" :key="stat.model">
-        <div :class="'tesla-stats-icon tesla-stats-icon--'+stat.model |  lowercase"></div>
-        <p>{{ stat.miles | km }}</p>
+        <div :class="'tesla-stats-icon tesla-stats-icon--'+stat.model.toLowerCase() "></div>
+        <p>{{ km(stat.miles) }}</p>
       </li>
     </ul>
   </div>
@@ -18,10 +18,7 @@ export default {
       required: true,
     },
   },
-  filters: {
-    lowercase(value) {
-      return !value ? '' : value.toLowerCase();
-    },
+  computed: {
     km(value) {
       return Math.floor(value * 1.609344);
     },

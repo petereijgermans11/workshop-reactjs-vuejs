@@ -25,11 +25,9 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      focused: false,
-    };
-  },
+  data: () => ({
+    focused: false,
+  }),
   methods: {
     onBlur() {
       this.focused = false;

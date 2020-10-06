@@ -8,8 +8,8 @@
           <span>{{ unit }}</span>
         </p>
         <div class="tesla-counter__controls" tabindex="-1">
-          <button tabindex="-1" type="button" @click="increment" :disabled="value === max"></button>
-          <button tabindex="-1" type="button" @click="decrement" :disabled="value === min"></button>
+          <button tabindex="-1" type="button" @click="increment" :disabled="modelValue === max"></button>
+          <button tabindex="-1" type="button" @click="decrement" :disabled="modelValue === min"></button>
         </div>
       </div>
     </div>
@@ -19,6 +19,7 @@
 <script>
 export default {
   name: 'tesla-counter',
+  
   props: {
     step: {
       type: Number,
@@ -40,32 +41,30 @@ export default {
       type: String,
       required: true,
     },
-    value: {
+    modelValue: {
       type: Number,
-      required: true,
+      required: false,
     },
   },
-  data() {
-    return {
-      focused: false,
-    };
-  },
+  data: () => ({
+    focused: false,
+  }),
   computed: {
     kmhOrMph() {
       return this.unit === 'kmh'
-        ? Math.floor(this.value * 1.609344)
-        : this.value;
+        ? Math.floor(this.modelValue * 1.609344)
+        : this.modelValue;
     },
   },
   methods: {
     increment() {
-      if (this.value < this.max) {
-        this.$emit('input', this.value + this.step);
+      if (this.modelValue < this.max) {
+        this.$emit('update:modelValue', this.modelValue + this.step);
       }
     },
     decrement() {
-      if (this.value > this.min) {
-        this.$emit('input', this.value - this.step);
+      if (this.modelValue > this.min) {
+        this.$emit('update:modelValue', this.modelValue - this.step);
       }
     },
     onFocus() {

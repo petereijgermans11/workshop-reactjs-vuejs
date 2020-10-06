@@ -17,11 +17,9 @@
             TeslaBattery,
             TeslaHeader
         },
-        data() {
-            return {
-                greetings: "Hello TESLA !!!"
-            };
-        }
+        data: () => ({
+            greetings: "Hello TESLA !!!"
+        })
     };
 </script>
 

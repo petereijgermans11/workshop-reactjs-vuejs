@@ -1,7 +1,6 @@
 <template>
   <form class="tesla-battery">
     <h1>{{ title }}</h1>
-    <Snow :color="color"/>
     <tesla-car :wheelsize="tesla.wheels" :speed="tesla.speed" />
     <tesla-stats :stats="stats" />
     <div class="tesla-controls cf">
@@ -9,8 +8,8 @@
       <div class="tesla-climate cf">
         <tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" v-model="tesla.temperature" />
         <tesla-climate :limit="tesla.temperature > 10" :value="tesla.climate" :onClick="changeClimate" />
-      </div>
-      <tesla-wheels v-model="tesla.wheels" />
+      </div> 
+      <tesla-wheels v-model:wheelsize="tesla.wheels" />
     </div>
     <div class="tesla-battery__notice">
       <p>
@@ -24,7 +23,6 @@
 </template>
 
 <script>
-import Snow from 'vue-niege';
 import TeslaCar from './components/tesla-car.component';
 import TeslaClimate from './components/tesla-climate.component';
 import TeslaCounter from './components/tesla-counter.component';
@@ -36,16 +34,14 @@ import teslaService from './tesla-battery.service';
 export default {
   name: 'tesla-battery',
   components: {
-    Snow,
     TeslaCar,
     TeslaClimate,
     TeslaCounter,
     TeslaStats,
     TeslaWheels,
   },
-  data() {
-    return {
-      color: "#0000ff",
+  data: () => ({
+     color: "#0000ff",
       title: 'Ranger Per Charge',
       results: ['60', '60D', '75', '75D', '90D', 'P100D'],
       tesla: {
@@ -53,9 +49,8 @@ export default {
         temperature: 20,
         climate: true,
         wheels: 19,
-      },
-    };
-  },
+    }
+  }),
   computed: {
     models() {
       return teslaService.getModelData();
