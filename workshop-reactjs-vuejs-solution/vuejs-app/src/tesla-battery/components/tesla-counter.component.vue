@@ -1,3 +1,4 @@
+
 <template>
   <div class="tesla-counter">
     <p class="tesla-counter__title" v-once>{{ title }}</p>

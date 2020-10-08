@@ -1,3 +1,4 @@
+
 <template>
     <div id="app">
         <header class="header">
@@ -19,15 +20,14 @@
         components: {
             TeslaBattery,
         },
-        data() {
-            return {
-                logo,
-                greeting: "Hello TESLA !!!"
-            };
-        }
+       data: () => ({
+            logo,
+            greeting: "Hello TESLA !!!"
+        })
     };
 </script>
 
 <style lang="scss">
     @import 'tesla-style.scss';
 </style>
+

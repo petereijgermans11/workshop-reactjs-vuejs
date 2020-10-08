@@ -44,6 +44,20 @@ And download the Vue Devtools extension for a better development experience:
 https://github.com/vuejs/vue-devtools
 
 
+# STARTING POINT
+
+The way we bootstrap a new Vue app (in main.js) has changed in Vue 3. Rather than using new Vue(), we now need to import the new "createApp" method.
+We then call this method, passing our Vue instance definition object, and assign the return object to a variable app.
+Replace main.js with this code:
+
+
+    import { createApp } from 'vue'
+    import App from './App.vue'
+
+    createApp(App).mount('#app')
+
+
+
 # ERROR 1
 ```bash
 
@@ -149,6 +163,8 @@ When you click on the 'Speed UP button' again, then you get the following error:
 
 tesla-counter.component.vue?d8fb:64 Uncaught TypeError: this.emit is not a function
     at VueComponent.increment
+
+    SOLUTION: this.$emit('update:modelValue' ....
   
 ```
 
@@ -257,21 +273,10 @@ The 'Arrow down' does not work when the focus is on it (in the tesla-counter.com
 # Exercise 8
 ```bash
 
-Add this Vue component to add a snowfall on your page.
-
-    https://github.com/P3trur0/vue-niege
-
-And change the background color, so you can see the snow (tesla-style.css)
-Change the properties of this component.
-```
-
-# Exercise 9
-```bash
-
 Use transition/animation to move the car
 ```
 
-# Exercise 10
+# Exercise 9
 ```bash
 
 Disable the ArrowDown/ArrowUP icon for 'speed-button' or 'outside temparature-button',
@@ -279,7 +284,7 @@ when the min or max is reached
 
 ```
 
-# Exercise 11
+# Exercise 10
 ```bash
 
 Unittest some components with Vue-Jest

@@ -41,7 +41,6 @@ export default {
     TeslaWheels,
   },
   data: () => ({
-     color: "#0000ff",
       title: 'Ranger Per Charge',
       results: ['60', '60D', '75', '75D', '90D', 'P100D'],
       tesla: {

@@ -16,12 +16,11 @@
 export default {
   name: 'tesla-wheels',
   props: ['value'],
-  data() {
-    return {
+  data: () => ({
       sizes: [19, 21],
       focused: null,
-    };
-  },
+
+  }),
   methods: {
     onBlur() {
       this.focused = '';

@@ -2,7 +2,7 @@
   <div class="tesla-stats">
     <ul>
       <li v-for="stat in stats" :key="model">
-        <div :class="'tesla-stats-icon tesla-stats-icon--'+stat.model |  lowercase"></div>
+        <div :class="'tesla-stats-icon tesla-stats-icon--'+stat.model.toLowerCase()"></div>
         <p>{{ stat.miles }}
           <span>MI</span>
         </p>
@@ -18,11 +18,6 @@ export default {
     stats: {
       type: Array,
       required: true,
-    },
-  },
-  filters: {
-    lowercase(value) {
-      return !value ? '' : value.toLowerCase();
     },
   },
 };

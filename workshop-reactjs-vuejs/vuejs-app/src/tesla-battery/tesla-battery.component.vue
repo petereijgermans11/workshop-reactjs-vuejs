@@ -48,8 +48,7 @@ export default {
     TeslaStats,
     TeslaWheels,
   },
-  data() {
-    return {
+  data: () => ({
       title: 'Ranger Per Charge',
       tesla_models: ['60', '60D', '75', '75D', '90D', 'P100D'],
       tesla: {
@@ -58,8 +57,7 @@ export default {
         climate: true,
         wheels: 19,
       },
-    };
-  },
+  }),
   computed: {
     models() {
       return teslaService.getModelData();
