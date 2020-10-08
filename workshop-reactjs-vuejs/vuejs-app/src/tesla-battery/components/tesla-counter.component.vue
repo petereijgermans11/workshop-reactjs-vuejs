@@ -8,7 +8,7 @@
           <span>{{ unit }}</span>
         </p>
         <div class="tesla-counter__controls" tabindex="-1">
-          <button tabindex="-1" type="button" @click="increment" :enabled="modelValue === max"></button>
+          <button tabindex="-1" type="button" onclick="increment" :enabled="modelValue === max"></button>
           <button tabindex="-1" type="button" onclick="decrement" :enabled="modelValue === min"></button>
         </div>
       </div>
@@ -58,7 +58,7 @@ export default {
   methods: {
     increment() {
       if (this.modelValue < this.max) {
-        this.$emit('update:modelValue', this.modelValue + this.step);
+        this.emit('input', this.modelValue + this.step);
       }
     },
     decrement() { 
