@@ -16,8 +16,8 @@
     <div class="tesla-controls cf">
       <tesla-counter title="Speed" unit="kmh" :step="5" :min="45" :max="70" v-model="tesla.speed" />
       <div class="tesla-climate cf">
-        <tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" />
-        <tesla-climate :limit="tesla.temperature > 20" :value="tesla.climate" :onClick="changeClimate" />
+        <tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" v-model="temperature" />
+        <tesla-climate :limit="tesla.temperature > 10" :value="tesla.climate" :onClick="changeClimate" />
       </div>
       <tesla-wheels v-model="wheels" />
     </div>
@@ -65,7 +65,7 @@ export default {
       stats() {
       return this.tesla_models.map(model => {
         const {speed, temperature, climate, wheels} = this.tesla;
-        const miles = this.models[model][wheels][climate ? 'on' : 'on'].speed[
+        const miles = this.models[model][wheels][climate ? 'on' : 'off'].speed[
           speed
         ][temperature];
         return {

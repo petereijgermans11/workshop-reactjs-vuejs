@@ -42,7 +42,7 @@ export default {
   },
   data: () => ({
       title: 'Ranger Per Charge',
-      results: ['60', '60D', '75', '75D', '90D', 'P100D'],
+      tesla_models: ['60', '60D', '75', '75D', '90D', 'P100D'],
       tesla: {
         speed: 55,
         temperature: 20,
@@ -55,7 +55,7 @@ export default {
       return teslaService.getModelData();
     },
     stats() {
-      return this.results.map(model => {
+      return this.tesla_models.map(model => {
         const {speed, temperature, climate, wheels} = this.tesla;
         const miles = this.models[model][wheels][climate ? 'on' : 'off'].speed[
           speed

@@ -58,16 +58,14 @@ Replace main.js with this code:
 
 
 
-############### ERROR 1
+# ERROR 1
 ```bash
 
-Property or method "wheels" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+Property "wheels" was accessed during render but is not defined on instance. 
+  at <TeslaBattery> 
+  at <App>
 
 found in
-
----> <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
-       <App> at src/App.vue
-         <Root>
 
 See line 'tesla-battery.component':
 
@@ -76,22 +74,21 @@ See line 'tesla-battery.component':
 ```
 
 
-################ ERROR 2
+# ERROR 2
 ```bash
 
-Missing required prop: "value"
+Property "temperature" was accessed during render but is not defined on instance. 
+  at <TeslaBattery> 
+  at <App>
 
 found in
 
----> <TeslaCounter> at src/tesla-battery/components/tesla-counter.component.vue
-       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
-         <App> at src/App.vue
-           <Root>
+See line 'tesla-battery.component':
 
+         '<tesla-wheels v-model="wheels" />'
 
-See line 'tesla-battery.component' (HINT: 'v-model' directive is missing):
+        '<tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" v-model="temperature" />'
 
-<tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" />
 
 ```       
 
@@ -139,42 +136,27 @@ Uncaught ReferenceError: increment is not defined
 
  See 'tesla-counter.component':
 
-<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
-<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
+    <button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
+
+
 ```
 
 # ERROR 6
 ```bash
 When you click on the 'Speed UP button' again, then you get the following error:
 
-tesla-counter.component.vue?d8fb:64 Uncaught TypeError: this.emit is not a function
-    at VueComponent.increment
+TypeError: this.emit is not a function
+    at Proxy.increment (tesla-counter.component.vue?ccf5:61)
+    at Object.onClick. .......
 
-    SOLUTION: this.$emit('update:modelValue' ....
+See 'tesla-counter.component':
+
+    ISSUE:    this.emit('input', this.modelValue + this.step); 
+
+    SOLUTION: this.$emit('update:modelValue', this.modelValue + this.step);
   
 ```
 
-# ERROR 7
-```bash
-
-The 'stats()' function in the 'tesla-battery.component' does change when the user input changes (wheelzise – climate – speed - temparature).
-
-Extra info:
-tesla-battery.component stats()-function is for calculating the maximum battery range per model. 
-This range is based on the user input (wheelzise – climate – speed - temparature).
-
-This is the JSON-format what the stats()-function should return per model:
-
-[
-  {"model":"60","miles":267},
-  {"model":"60D","miles":271},
-  {"model":"75","miles":323},
-  {"model":"75D","miles":332},
-  {"model":"90D","miles":365},
-  {"model":"P100D","miles":409}
-]
-
-```  
 
 # Exercise 1
 And make the v-model work. So the wheelsize buttons also work!
