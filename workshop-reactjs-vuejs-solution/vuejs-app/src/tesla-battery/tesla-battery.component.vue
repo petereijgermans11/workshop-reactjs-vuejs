@@ -9,7 +9,7 @@
         <tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" v-model="tesla.temperature" />
         <tesla-climate :limit="tesla.temperature > 10" :value="tesla.climate" :onClick="changeClimate" />
       </div> 
-      <tesla-wheels v-model:wheelsize="tesla.wheels" />
+      <tesla-wheels v-model="tesla.wheels" />
     </div>
     <div class="tesla-battery__notice">
       <p>
