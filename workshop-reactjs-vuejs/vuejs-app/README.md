@@ -58,7 +58,7 @@ Replace main.js with this code:
 
 
 
-# ERROR 1
+############### ERROR 1
 ```bash
 
 Property or method "wheels" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
@@ -75,22 +75,8 @@ See line 'tesla-battery.component':
 
 ```
 
-# ERROR 2
-```bash
 
-Property or method "model" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
-
-found in:
-
----> <TeslaStats> at src/tesla-battery/components/tesla-stats.component.vue
-
-see 'tesla-stats.component':
-
-<li v-for="stat in stats" :key="model">
-       
-```
-
-# ERROR 3
+################ ERROR 2
 ```bash
 
 Missing required prop: "value"
@@ -109,7 +95,7 @@ See line 'tesla-battery.component' (HINT: 'v-model' directive is missing):
 
 ```       
 
-# ERROR 4
+# ERROR 3
 ```bash
 
 Invalid prop: type check failed for prop "value". Expected String, got Boolean.
@@ -125,7 +111,7 @@ See 'tesla-climate.component'
 
 ```
 
-# ERROR 5
+# ERROR 4
 ```bash
 
 Invalid prop: type check failed for prop "onClick". Expected String, got Function.
@@ -142,7 +128,7 @@ See 'tesla-climate.component'
 
 ```
 
-# ERROR 6
+# ERROR 5
 ```bash
 
 When you click on the 'Speed UP button', then you get the following error:
@@ -157,7 +143,7 @@ Uncaught ReferenceError: increment is not defined
 <button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
 ```
 
-# ERROR 7
+# ERROR 6
 ```bash
 When you click on the 'Speed UP button' again, then you get the following error:
 
@@ -168,7 +154,7 @@ tesla-counter.component.vue?d8fb:64 Uncaught TypeError: this.emit is not a funct
   
 ```
 
-# ERROR 8
+# ERROR 7
 ```bash
 
 The 'stats()' function in the 'tesla-battery.component' does change when the user input changes (wheelzise – climate – speed - temparature).
@@ -190,9 +176,10 @@ This is the JSON-format what the stats()-function should return per model:
 
 ```  
 
-
-
 # Exercise 1
+And make the v-model work. So the wheelsize buttons also work!
+
+# Exercise 2
 ```bash
 
 Make the climate button work.
@@ -200,7 +187,7 @@ It is always on.
 
  ```
 
-# Exercise 2
+# Exercise 3
 ```bash
 
 Decrement speed/temparature does not work (in the tesla-counter.component).
@@ -213,13 +200,13 @@ Fix the decrement function:
 
  ```
 
-# Exercise 3
+# Exercise 4
 ```bash
 
 Create the 'tesla-notice.component' for showing the bottom text.
 ```
 
-# Exercise 4
+# Exercise 5
 ```bash
 
 Create the 'tesla-header.component' for showing the tesla 'logo'.
@@ -229,7 +216,7 @@ HINT: See the slides for the solution.
 
  ``` 
 
- # Exercise 5
+ # Exercise 6
  ```bash
  
 Create the 'tesla-car.component' for showing the tesla-car.
@@ -249,7 +236,7 @@ And define the TeslaCar in the 'components-section' of the 'tesla-battery.compon
 
  ``` 
 
-# Exercise 6
+# Exercise 7
 ```bash
 
 Write a custom 'filter' with the name 'km', to translate Miles to km (in the tesla-stats.component)
@@ -259,7 +246,7 @@ Write a custom 'filter' with the name 'km', to translate Miles to km (in the tes
   }
 ``` 
 
-# Exercise 7
+# Exercise 8
 ```bash
 
 The 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
@@ -270,13 +257,13 @@ The 'Arrow down' does not work when the focus is on it (in the tesla-counter.com
 
 ```
 
-# Exercise 8
+# Exercise 9
 ```bash
 
 Use transition/animation to move the car
 ```
 
-# Exercise 9
+# Exercise 10
 ```bash
 
 Disable the ArrowDown/ArrowUP icon for 'speed-button' or 'outside temparature-button',
@@ -284,7 +271,7 @@ when the min or max is reached
 
 ```
 
-# Exercise 10
+# Exercise 11
 ```bash
 
 Unittest some components with Vue-Jest
