@@ -85,8 +85,6 @@ found in
 
 See line 'tesla-battery.component':
 
-         '<tesla-wheels v-model="wheels" />'
-
         '<tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" v-model="temperature" />'
 
 
@@ -131,12 +129,13 @@ See 'tesla-climate.component'
 When you click on the 'Speed UP button', then you get the following error:
 
 Uncaught ReferenceError: increment is not defined
-    at HTMLButtonElement.onclick ((index):17)
+    at HTMLButtonElement.onclick ((index):16)
 
 
  See 'tesla-counter.component':
 
     <button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
+
 
 
 ```
@@ -157,22 +156,10 @@ See 'tesla-counter.component':
   
 ```
 
-
-# Exercise 1
-And make the v-model work. So the wheelsize buttons also work!
-
-# Exercise 2
+# ERROR 7
 ```bash
 
-Make the climate button work.
-It is always on. 
-
- ```
-
-# Exercise 3
-```bash
-
-Decrement speed/temparature does not work (in the tesla-counter.component).
+Solve above issues also for Decrement speed/temparature (in the tesla-counter.component)
 
 Fix the decrement function:
 
@@ -180,25 +167,23 @@ Fix the decrement function:
    ...<FIXME>...
  }
 
- ```
+```
 
-# Exercise 4
+# Exercise 1
+```bash
+
+And make the 'v-model' work for the tesla wheelsize. So the wheelsize buttons also work!
+
+```
+
+# Exercise 2
 ```bash
 
 Create the 'tesla-notice.component' for showing the bottom text.
+
 ```
 
-# Exercise 5
-```bash
-
-Create the 'tesla-header.component' for showing the tesla 'logo'.
-Define 'greeting' as input property!
-
-HINT: See the slides for the solution.
-
- ``` 
-
- # Exercise 6
+ # Exercise 3
  ```bash
  
 Create the 'tesla-car.component' for showing the tesla-car.
@@ -218,7 +203,17 @@ And define the TeslaCar in the 'components-section' of the 'tesla-battery.compon
 
  ``` 
 
-# Exercise 7
+ # Exercise 4
+```bash
+
+Create the 'tesla-header.component' for showing the tesla 'logo'.
+Define 'greeting' as input property!
+
+HINT: See the slides for the solution.
+
+ ``` 
+
+# Exercise 5
 ```bash
 
 Write a custom 'filter' with the name 'km', to translate Miles to km (in the tesla-stats.component)
@@ -228,7 +223,7 @@ Write a custom 'filter' with the name 'km', to translate Miles to km (in the tes
   }
 ``` 
 
-# Exercise 8
+# Exercise 6
 ```bash
 
 The 'Arrow down' does not work when the focus is on it (in the tesla-counter.component).
@@ -239,21 +234,13 @@ The 'Arrow down' does not work when the focus is on it (in the tesla-counter.com
 
 ```
 
-# Exercise 9
+# Exercise 7
 ```bash
 
 Use transition/animation to move the car
 ```
 
-# Exercise 10
-```bash
-
-Disable the ArrowDown/ArrowUP icon for 'speed-button' or 'outside temparature-button',
-when the min or max is reached
-
-```
-
-# Exercise 11
+# Exercise 8
 ```bash
 
 Unittest some components with Vue-Jest

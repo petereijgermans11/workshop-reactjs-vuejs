@@ -17,11 +17,11 @@ export default {
       required: true,
     },
     value: {
-      type: String,
+      type: Boolean,
       required: true,
     },
     onClick: {
-      type: String,
+      type: Function,
       required: true,
     },
   },
