@@ -44,16 +44,28 @@ And download the Vue Devtools extension for a better development experience:
 https://github.com/vuejs/vue-devtools
 
 
+# STARTING POINT
+
+The way we bootstrap a new Vue app (in main.js) has changed in Vue 3. Rather than using new Vue(), we now need to import the new "createApp" method.
+We then call this method, passing our Vue instance definition object, and assign the return object to a variable app.
+Replace main.js with this code:
+
+
+    import { createApp } from 'vue'
+    import App from './App.vue'
+
+    createApp(App).mount('#app')
+
+
+
 # ERROR 1
 ```bash
 
-Property or method "wheels" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
+Property "wheels" was accessed during render but is not defined on instance. 
+  at <TeslaBattery> 
+  at <App>
 
 found in
-
----> <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
-       <App> at src/App.vue
-         <Root>
 
 See line 'tesla-battery.component':
 
@@ -61,41 +73,24 @@ See line 'tesla-battery.component':
 
 ```
 
+
 # ERROR 2
 ```bash
 
-Property or method "model" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property. See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.
-
-found in:
-
----> <TeslaStats> at src/tesla-battery/components/tesla-stats.component.vue
-
-see 'tesla-stats.component':
-
-<li v-for="stat in stats" :key="model">
-       
-```
-
-# ERROR 3
-```bash
-
-Missing required prop: "value"
+Property "temperature" was accessed during render but is not defined on instance. 
+  at <TeslaBattery> 
+  at <App>
 
 found in
 
----> <TeslaCounter> at src/tesla-battery/components/tesla-counter.component.vue
-       <TeslaBattery> at src/tesla-battery/tesla-battery.component.vue
-         <App> at src/App.vue
-           <Root>
+See line 'tesla-battery.component':
 
+        '<tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" v-model="temperature" />'
 
-See line 'tesla-battery.component' (HINT: 'v-model' directive is missing):
-
-<tesla-counter title="Outside Temperature" unit="°" :step="10" :min="-10" :max="40" />
 
 ```       
 
-# ERROR 4
+# ERROR 3
 ```bash
 
 Invalid prop: type check failed for prop "value". Expected String, got Boolean.
@@ -111,7 +106,7 @@ See 'tesla-climate.component'
 
 ```
 
-# ERROR 5
+# ERROR 4
 ```bash
 
 Invalid prop: type check failed for prop "onClick". Expected String, got Function.
@@ -128,57 +123,43 @@ See 'tesla-climate.component'
 
 ```
 
-# ERROR 6
+# ERROR 5
 ```bash
 
-When you click on the 'Speed button', then you get the following error:
+When you click on the 'Speed UP button', then you get the following error:
 
 Uncaught ReferenceError: increment is not defined
-    at HTMLButtonElement.onclick ((index):17)
+    at HTMLButtonElement.onclick ((index):16)
 
 
  See 'tesla-counter.component':
 
-<button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
-<button tabindex="-1" type="button" onclick="decrement" :disabled="value === min"></button>
+    <button tabindex="-1" type="button" onclick="increment" :disabled="value === max"></button>
+
+
+
 ```
 
+# ERROR 6
+```bash
+When you click on the 'Speed UP button' again, then you get the following error:
 
+TypeError: this.emit is not a function
+    at Proxy.increment (tesla-counter.component.vue?ccf5:61)
+    at Object.onClick. .......
+
+See 'tesla-counter.component':
+
+    ISSUE:    this.emit('input', this.modelValue + this.step); 
+
+    SOLUTION: this.$emit('update:modelValue', this.modelValue + this.step);
+  
+```
 
 # ERROR 7
 ```bash
 
-The 'stats()' function in the 'tesla-battery.component' does change when the user input changes (wheelzise – climate – speed - temparature).
-
-Extra info:
-tesla-battery.component stats()-function is for calculating the maximum battery range per model. 
-This range is based on the user input (wheelzise – climate – speed - temparature)
-
-This is the JSON-format what the stats()-function should return per model:
-
-[
-  {"model":"60","miles":267},
-  {"model":"60D","miles":271},
-  {"model":"75","miles":323},
-  {"model":"75D","miles":332},
-  {"model":"90D","miles":365},
-  {"model":"P100D","miles":409}
-]
-
-```  
-
-# Exercise 1
-```bash
-
-Make the climate button work.
-It is always on. 
-
- ```
-
-# Exercise 2
-```bash
-
-Decrement speed/temparature does not work (in the tesla-counter.component).
+Solve above issues also for Decrement speed/temparature (in the tesla-counter.component)
 
 Fix the decrement function:
 
@@ -186,20 +167,23 @@ Fix the decrement function:
    ...<FIXME>...
  }
 
- ```
+```
 
-
-# Exercise 3
+# Exercise 1
 ```bash
 
-Create the 'tesla-header.component' for showing the tesla 'logo'.
-Define 'greeting' as input property!
+And make the 'v-model' work for the tesla wheelsize. So the wheelsize buttons also work!
 
-HINT: See the slides for the solution.
+```
 
- ``` 
+# Exercise 2
+```bash
 
- # Exercise 4
+Create the 'tesla-notice.component' for showing the bottom text.
+
+```
+
+ # Exercise 3
  ```bash
  
 Create the 'tesla-car.component' for showing the tesla-car.
@@ -216,6 +200,16 @@ Move this code from the TeslaBattery.js to the TeslaCar.js and place it in the '
 
 Finally import the 'tesla-car.component' in the 'tesla-battery.component' (alias: TeslaCar)
 And define the TeslaCar in the 'components-section' of the 'tesla-battery.component'.
+
+ ``` 
+
+ # Exercise 4
+```bash
+
+Create the 'tesla-header.component' for showing the tesla 'logo'.
+Define 'greeting' as input property!
+
+HINT: See the slides for the solution.
 
  ``` 
 
@@ -243,13 +237,13 @@ The 'Arrow down' does not work when the focus is on it (in the tesla-counter.com
 # Exercise 7
 ```bash
 
-Add the Vue component to add a snowfall on your page.
+Use transition/animation to move the car
+```
 
-    https://github.com/P3trur0/vue-niege
+# Exercise 8
+```bash
 
-And change the background color, so you can see the snow (tesla-style.css)
-Or change the properties of this component.
-
+Unittest some components with Vue-Jest
 ```
 
 # Final Exercise:
