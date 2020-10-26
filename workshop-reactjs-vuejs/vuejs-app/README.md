@@ -217,10 +217,8 @@ HINT: See the slides for the solution.
 ```bash
 
 Write a custom 'filter' with the name 'km', to translate Miles to km (in the tesla-stats.component)
-
-  filters: {
-    ...<FIXME>...
-  }
+Use the Composition API for implementing a reusable filter!
+  
 ``` 
 
 # Exercise 6
