@@ -7,16 +7,19 @@ import TeslaCounter from '../components/TeslaCounter/TeslaCounter';
 import TeslaClimate from '../components/TeslaClimate/TeslaClimate';
 import TeslaWheels from '../components/TeslaWheels/TeslaWheels';
 import { getModelData } from '../services/BatteryService';
+import useStatesHooks from './useStatesHooks';
 
 function  TeslaBattery (props) {
 
-  const [carstats,setCarstats] = useState([]);
-  const [config,setConfig] = useState({
-    speed: 55,
-    temperature: 20,
-    climate: true,
-    wheels: 19
-   });
+  // const [carstats,setCarstats] = useState([]);
+  // const [config,setConfig] = useState({
+  //   speed: 55,
+  //   temperature: 20,
+  //   climate: true,
+  //   wheels: 19
+  //  });
+  const [{ carstats, config }] = useStatesHooks();
+
 
   const calculateStats = (models, value) => {
     const dataModels = getModelData();
