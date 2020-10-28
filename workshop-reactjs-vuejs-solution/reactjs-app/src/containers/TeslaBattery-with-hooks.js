@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './TeslaBattery.css';
 import TeslaNotice from '../components/TeslaNotice/TeslaNotice';
 import TeslaCar from '../components/TeslaCar/TeslaCar';
@@ -18,7 +18,7 @@ function  TeslaBattery (props) {
   //   climate: true,
   //   wheels: 19
   //  });
-  const [{ carstats, config }] = useStatesHooks();
+  const { carstats, config } = useStatesHooks();
 
 
   const calculateStats = (models, value) => {

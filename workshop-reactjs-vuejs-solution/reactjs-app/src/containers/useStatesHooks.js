@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const useStatesHooks = () => {
   const [carstats,setCarstats] = useState([]);
   const [config,setConfig] = useState({
@@ -6,6 +8,7 @@ const useStatesHooks = () => {
     climate: true,
     wheels: 19
    });
+   return { carstats,  config };
 }
 
 export default useStatesHooks;
