@@ -10,14 +10,6 @@ import { getModelData } from '../services/BatteryService';
 import useStatesHooks from './useStatesHooks';
 
 function  TeslaBattery (props) {
-
-  // const [carstats,setCarstats] = useState([]);
-  // const [config,setConfig] = useState({
-  //   speed: 55,
-  //   temperature: 20,
-  //   climate: true,
-  //   wheels: 19
-  //  });
   const { carstats, config } = useStatesHooks();
 
 
