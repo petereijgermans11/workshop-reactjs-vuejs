@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64fe1302-2214-4a8d-a9dc-b12f5e67e626" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PPT/TALK/Comparison_ReactJS_Vuejs.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/PPT/TALK/Comparison_ReactJS_Vuejs.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PPT/TALK/Vue versus React online talk.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/PPT/TALK/Vue versus React online talk.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/src/tesla-battery/components/tesla-stats.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/src/tesla-battery/components/tesla-stats.component.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/src/tesla-battery/tesla-battery.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/src/tesla-battery/tesla-battery.component.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/tesla-battery/components/tesla-climate.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/tesla-battery/components/tesla-climate.component.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/tesla-battery/components/tesla-counter.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/tesla-battery/components/tesla-counter.component.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/tesla-battery/components/tesla-stats.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/tesla-battery/components/tesla-stats.component.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/tesla-battery/components/tesla-wheels.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/tesla-battery/components/tesla-wheels.component.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/tesla-battery/tesla-battery.component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/src/tesla-battery/tesla-battery.component.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/package.json" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,8 +27,16 @@
   </component>
   <component name="ProjectId" id="1ibXdtdljrPmDGrc6ZhvJVRtwTo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,20 +45,10 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -73,11 +60,13 @@
       <option name="presentableId" value="Default" />
       <updated>1602177356302</updated>
       <workItem from="1602177358575" duration="765000" />
+      <workItem from="1614709971426" duration="1040000" />
+      <workItem from="1614792012236" duration="1790000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -89,5 +78,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -9,7 +9,6 @@
     "format": "prettier --write 'src/**/*.js'",
     "format:vue": "prettier --write 'src/**/*.vue'"
   },
-
   "dependencies": {
     "node-sass": "^4.14.0",
     "core-js": "^3.6.5",
