@@ -1,4 +1,4 @@
-# Tesla Battery Range Calculator in Vue !!!
+# Tesla Battery Range Calculator in Vue 3 !!!
 
 Hey guys, tonight you'll have to build this app:
 
@@ -6,7 +6,7 @@ Hey guys, tonight you'll have to build this app:
 
 Using either react or vuejs, choose your weapon ⚔
 
-### Clone or downlaod
+### Clone or download
 ```bash
 git clone https://github.com/petereijgermans11/workshop-reactjs-vuejs.git
 
@@ -109,7 +109,7 @@ See 'tesla-climate.component'
 # ERROR 4
 ```bash
 
-Invalid prop: type check failed for prop "onClick". Expected String, got Function.
+Invalid prop: type check failed for prop 'onClick'. Expected String, got 'Function'.
 
 found in
 
@@ -172,7 +172,7 @@ Fix the decrement function:
 # Exercise 1
 ```bash
 
-And make the 'v-model' work for the tesla wheelsize. So the wheelsize buttons also work!
+And make the 'v-model' work for the tesla wheelsize. So the wheelsize buttons will work!
 
 ```
 
@@ -216,8 +216,10 @@ HINT: See the slides for the solution.
 # Exercise 5
 ```bash
 
-Write a custom 'filter' with the name 'km', to translate Miles to km (in the tesla-stats.component)
-Use the Composition API for implementing a reusable filter!
+Write a Composable 'filters.js', to translate Miles to km (in the tesla-stats.component)
+Use the Composition API for implementing a reusable filter! 
+
+HINT: See the slides for the solution.
   
 ``` 
 
@@ -242,6 +244,12 @@ Use transition/animation to move the car
 ```bash
 
 Unittest some components with Vue-Jest
+```
+
+# Exercise 9
+```bash
+
+Use the Composition API on other pieces in the code.
 ```
 
 # Final Exercise:

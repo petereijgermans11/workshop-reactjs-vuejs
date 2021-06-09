@@ -4,7 +4,12 @@
     <list default="true" id="64fe1302-2214-4a8d-a9dc-b12f5e67e626" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PPT/TALK/Vue versus React online talk.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/PPT/TALK/Vue versus React online talk.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/reactjs-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/reactjs-app/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/reactjs-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/reactjs-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs-solution/vuejs-app/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs/reactjs-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs/reactjs-app/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs/reactjs-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs/reactjs-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/workshop-reactjs-vuejs/vuejs-app/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +67,7 @@
       <workItem from="1602177358575" duration="765000" />
       <workItem from="1614709971426" duration="1040000" />
       <workItem from="1614792012236" duration="1790000" />
+      <workItem from="1623263225052" duration="1928000" />
     </task>
     <servers />
   </component>

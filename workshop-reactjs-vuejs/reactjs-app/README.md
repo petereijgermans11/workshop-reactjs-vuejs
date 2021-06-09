@@ -26,7 +26,7 @@ npm start
 
 or
 
-npm install yarn -g
+npm i yarn -g
 yarn
 yarn start
 
@@ -43,13 +43,13 @@ Development Server is running on http://localhost:3000
 # ERROR 1
 ```bash
 
-Failed prop type: Invalid prop `value` of type `object` supplied to `TeslaWheels`, expected `number`.
+warning.js:33 Warning: Failed prop type: Invalid prop 'value' of type 'object' supplied to 'TeslaWheels', expected 'number'.
     in TeslaWheels (at TeslaBattery.js:147)
     in TeslaBattery (at App.js:28)
     in div (at App.js:26)
     in App (at index.js:7)
 
-See line 'TeslaBattery.js':
+See line 'TeslaBattery.js' (HINT: value is wrong):
 
 <TeslaWheels
             value={this}
@@ -62,13 +62,13 @@ See line 'TeslaBattery.js':
 # ERROR 2
 ```bash
 
-Failed prop type: Invalid prop `wheelsize` of type `number` supplied to `TeslaCar`, expected `string`.
+warning.js:33 Warning: Failed prop type: Invalid prop 'wheelsize' of type 'number' supplied to 'TeslaCar', expected 'string'.
     in TeslaCar (at TeslaBattery.js:125)
     in TeslaBattery (at App.js:28)
     in div (at App.js:26)
     in App (at index.js:7)
 
-See line in the 'TeslaCar.js':
+See line in the 'TeslaCar.js' (HINT: type is wrong):
 
 TeslaCar.propTypes = {
   wheelsize: React.PropTypes.string
@@ -80,7 +80,7 @@ TeslaCar.propTypes = {
 # ERROR 3
 ```bash
 
-flattenChildren(...): Encountered two children with the same key, `[object Object]`. Child keys must be unique; when two children share a key, only the first child will be used.
+warning.js:33 Warning: flattenChildren(...): Encountered two children with the same key, '[object Object]'. Child keys must be unique; when two children share a key, only the first child will be used.
     
 
 See line in the 'TeslaBattery.js':
@@ -98,7 +98,7 @@ See line in the 'TeslaBattery.js':
 # ERROR 4
 ```bash
 
-Failed prop type: Invalid prop `handleChangeClimate` of type `function` supplied to `TeslaClimate`, expected `string`.
+warning.js:33 Warning: Failed prop type: Invalid prop 'handleChangeClimate' of type `function` supplied to 'TeslaClimate', expected 'string'.
     in TeslaClimate (at TeslaBattery.js:141)
     in TeslaBattery (at App.js:28)
     in div (at App.js:26)
@@ -120,7 +120,7 @@ TeslaClimate.propTypes = {
 
 When you click op the 'Speed button', then you get the following error:
 
-Unknown prop `click` on <button> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
+warning.js:33 Warning: Unknown prop 'click' on <button> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
     in button (at TeslaCounter.js:14)
     in div (at TeslaCounter.js:13)
     in div (at TeslaCounter.js:8)
@@ -156,27 +156,26 @@ See line in the 'TeslaCounter.js':
 
 'updateCounterState' does not work in 'TeslaBattery.js' 
 (HINT: do NOT use this.state.config = this.statsUpdate(), to update the Counter State).
+(HINT use: this.setState({}))
 
  updateCounterState(title, newValue) {
     const config = { ...this.state.config };
     // update config state with new value
     title === 'Speed' ? config['speed'] = newValue : config['temperature'] = newValue;
     // update our state
-    this.state.config = this.statsUpdate();   ---> SHOULD BE: this.setState({ config }, () => {this.statsUpdate()}); 
+    this.state.config = this.statsUpdate();
   }
-
-  Read also : https://reactjs.org/docs/state-and-lifecycle.html
 ```
 
 # ERROR 7
 ```bash
 
- Unknown prop `change` on <input> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
+ Unknown prop 'change' on <input> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
     in input (at TeslaWheels.js:10)
 
 ```
 
-# ERROR 8 (OPTIONAL)
+# ERROR 8
 ```bash
 
 Fix the warning:
@@ -184,73 +183,59 @@ Warning: Accessing PropTypes via the main React package is deprecated, and will 
 
 ```
 
-# Exersise 1
+# Exercise 1
 ```bash
 
 Fix the Wheels buttons. 
-Code marked as 'Exersise 1' in the TeslaWheels.js, should be fixed.
+Code marked as 'Exercise 1' in the TeslaWheels.js, should be fixed.
 ```
 
-# Exersise 2
+# Exercise 2
 ```bash
 
 Create the TeslaNotice.js component.
-All code marked as 'Exersise 2' in the TeslaBattery.js, should be placed in the TeslaNotice.js. 
-HINT: See also the Header.js component.
+All code marked as 'Exercise 2' in the TeslaBattery.js, should be placed in the TeslaNotice.js. 
+HINT: See the Header.js component.
 ```
 
-# Exersise 3
+# Exercise 3
 ```bash
 
 Create the TeslaStats.js component.
-All code marked as 'Exersise 3' in the TeslaBattery.js, should be placed in the TeslaStats.js.
+All code marked as 'Exercise 3' in the TeslaBattery.js, should be placed in the TeslaStats.js.
 Use 'carstats' as input property!
-
-HINT:
-carstats contains the following JSON-format:
-It contains the maximum battery range per model.
-This range is based on the user input (wheelzise – climate – speed - temparature).
-
-[
-  {"model":"60","miles":267},
-  {"model":"60D","miles":271},
-  {"model":"75","miles":323},
-  {"model":"75D","miles":332},
-  {"model":"90D","miles":365},
-  {"model":"P100D","miles":409}
-]
-
-
 ```
 
-# Exersise 4
+# Exercise 4
 ```bash
 
 Convert 'miles' to 'kilometers' in TeslaStats.js 
 ```
 
-# Exersise 5
+# Exercise 5
 ```bash
 
 Make the climate button work!
-Code marked as 'Exersise 5' in the TeslaBattery.js, should be fixed.
+Code marked as 'Exercise 5' in the TeslaBattery.js, should be fixed.
 ```
 
-# Exersize 6
+# Exercise 6
 
-Add this React component to add a snowfall on your page.
+Add the React component to add a snowfall on your page.
 
 https://github.com/burakcan/react-snowstorm
 
 And change the background color, so you can see the snow (tesla-style.css)
 Or change the properties of this component.
 
-# Exersize 7
+# Exercise 7
 Convert the TeslaBattery.js component to a Functional component with React hooks.
-See my article @DzoneInc, how to do this:  https://dzone.com/articles/steps-to-convert-the-react-tesla-battery-range-calc-to-func-comp-with-hooks
+See my article @Dzone, how to do this:  https://dzone.com/articles/steps-to-convert-the-react-tesla-battery-range-calc-to-func-comp-with-hooks
 
+# Exercise 8
+Build your own hooks in this application: https://reactjs.org/docs/hooks-custom.html
 
-# Final Exersise 
+# Final Exercise
 To easy for you. implement Redux according to this post:
 
 https://gyver98.github.io/blog/development/react/2017/03/20/redux-tesla-battery-range-calculator-part2-english/

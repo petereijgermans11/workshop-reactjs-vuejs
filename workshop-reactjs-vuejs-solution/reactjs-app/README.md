@@ -43,7 +43,7 @@ Development Server is running on http://localhost:3000
 # ERROR 1
 ```bash
 
-warning.js:33 Warning: Failed prop type: Invalid prop `value` of type `object` supplied to `TeslaWheels`, expected `number`.
+warning.js:33 Warning: Failed prop type: Invalid prop 'value' of type 'object' supplied to 'TeslaWheels', expected 'number'.
     in TeslaWheels (at TeslaBattery.js:147)
     in TeslaBattery (at App.js:28)
     in div (at App.js:26)
@@ -62,7 +62,7 @@ See line 'TeslaBattery.js' (HINT: value is wrong):
 # ERROR 2
 ```bash
 
-warning.js:33 Warning: Failed prop type: Invalid prop `wheelsize` of type `number` supplied to `TeslaCar`, expected `string`.
+warning.js:33 Warning: Failed prop type: Invalid prop 'wheelsize' of type 'number' supplied to 'TeslaCar', expected 'string'.
     in TeslaCar (at TeslaBattery.js:125)
     in TeslaBattery (at App.js:28)
     in div (at App.js:26)
@@ -80,7 +80,7 @@ TeslaCar.propTypes = {
 # ERROR 3
 ```bash
 
-warning.js:33 Warning: flattenChildren(...): Encountered two children with the same key, `[object Object]`. Child keys must be unique; when two children share a key, only the first child will be used.
+warning.js:33 Warning: flattenChildren(...): Encountered two children with the same key, '[object Object]'. Child keys must be unique; when two children share a key, only the first child will be used.
     
 
 See line in the 'TeslaBattery.js':
@@ -98,7 +98,7 @@ See line in the 'TeslaBattery.js':
 # ERROR 4
 ```bash
 
-warning.js:33 Warning: Failed prop type: Invalid prop `handleChangeClimate` of type `function` supplied to `TeslaClimate`, expected `string`.
+warning.js:33 Warning: Failed prop type: Invalid prop 'handleChangeClimate' of type `function` supplied to 'TeslaClimate', expected 'string'.
     in TeslaClimate (at TeslaBattery.js:141)
     in TeslaBattery (at App.js:28)
     in div (at App.js:26)
@@ -120,7 +120,7 @@ TeslaClimate.propTypes = {
 
 When you click op the 'Speed button', then you get the following error:
 
-warning.js:33 Warning: Unknown prop `click` on <button> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
+warning.js:33 Warning: Unknown prop 'click' on <button> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
     in button (at TeslaCounter.js:14)
     in div (at TeslaCounter.js:13)
     in div (at TeslaCounter.js:8)
@@ -170,7 +170,7 @@ See line in the 'TeslaCounter.js':
 # ERROR 7
 ```bash
 
- Unknown prop `change` on <input> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
+ Unknown prop 'change' on <input> tag. Remove this prop from the element. For details, see https://fb.me/react-unknown-prop
     in input (at TeslaWheels.js:10)
 
 ```
@@ -183,43 +183,43 @@ Warning: Accessing PropTypes via the main React package is deprecated, and will 
 
 ```
 
-# Exersise 1
+# Exercise 1
 ```bash
 
 Fix the Wheels buttons. 
-Code marked as 'Exersise 1' in the TeslaWheels.js, should be fixed.
+Code marked as 'Exercise 1' in the TeslaWheels.js, should be fixed.
 ```
 
-# Exersise 2
+# Exercise 2
 ```bash
 
 Create the TeslaNotice.js component.
-All code marked as 'Exersise 2' in the TeslaBattery.js, should be placed in the TeslaNotice.js. 
+All code marked as 'Exercise 2' in the TeslaBattery.js, should be placed in the TeslaNotice.js. 
 HINT: See the Header.js component.
 ```
 
-# Exersise 3
+# Exercise 3
 ```bash
 
 Create the TeslaStats.js component.
-All code marked as 'Exersise 3' in the TeslaBattery.js, should be placed in the TeslaStats.js.
+All code marked as 'Exercise 3' in the TeslaBattery.js, should be placed in the TeslaStats.js.
 Use 'carstats' as input property!
 ```
 
-# Exersise 4
+# Exercise 4
 ```bash
 
 Convert 'miles' to 'kilometers' in TeslaStats.js 
 ```
 
-# Exersise 5
+# Exercise 5
 ```bash
 
 Make the climate button work!
-Code marked as 'Exersise 5' in the TeslaBattery.js, should be fixed.
+Code marked as 'Exercise 5' in the TeslaBattery.js, should be fixed.
 ```
 
-# Exersize 6
+# Exercise 6
 
 Add the React component to add a snowfall on your page.
 
@@ -228,12 +228,15 @@ https://github.com/burakcan/react-snowstorm
 And change the background color, so you can see the snow (tesla-style.css)
 Or change the properties of this component.
 
-# Exersize 7
+# Exercise 7
 Convert the TeslaBattery.js component to a Functional component with React hooks.
-See my article @DzoneInc, how to do this:  https://dzone.com/articles/steps-to-convert-the-react-tesla-battery-range-calc-to-func-comp-with-hooks
+See my article @Dzone, how to do this:  https://dzone.com/articles/steps-to-convert-the-react-tesla-battery-range-calc-to-func-comp-with-hooks
 
 
-# Final Exersise 
+# Exercise 8
+Build your own hooks in this application: https://reactjs.org/docs/hooks-custom.html
+
+# Final Exercise 
 To easy for you. implement Redux according to this post:
 
 https://gyver98.github.io/blog/development/react/2017/03/20/redux-tesla-battery-range-calculator-part2-english/
