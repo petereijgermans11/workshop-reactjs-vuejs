@@ -236,6 +236,9 @@ See my article @Dzone, how to do this:  https://dzone.com/articles/steps-to-conv
 # Exercise 8
 Build your own hooks in this application: https://reactjs.org/docs/hooks-custom.html
 
+# Exercise 9
+Convert this app to TypeScript !
+
 # Final Exercise 
 To easy for you. implement Redux according to this post:
 

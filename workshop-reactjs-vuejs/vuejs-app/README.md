@@ -231,25 +231,28 @@ The 'Arrow down' does not work when the focus is on it (in the tesla-counter.com
    onKeyUp(event) {
       ...<FIXME>...
    }
-
 ```
 
 # Exercise 7
 ```bash
 
-Use transition/animation to move the car
+Unittest some components with Vue-Jest
+
 ```
 
 # Exercise 8
 ```bash
 
-Unittest some components with Vue-Jest
+Use the Composition API on other pieces in the code.
 ```
 
 # Exercise 9
 ```bash
 
-Use the Composition API on other pieces in the code.
+Convert this app to TypeScript !
+
+See: https://blog.theodo.com/2019/11/integrate-typescript-with-vue/
+https://v3.vuejs.org/guide/typescript-support.html#official-declaration-in-npm-packages
 ```
 
 # Final Exercise:
