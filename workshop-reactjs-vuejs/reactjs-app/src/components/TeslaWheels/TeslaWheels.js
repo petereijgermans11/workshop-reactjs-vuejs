@@ -8,14 +8,14 @@ const LabelLists = (props) => {
   const sizes = [19, 21];
   // Exersise 1: FIXME
   // and ERROR 7 ---> solution: sizes.map() 
-  const LabelItems = sizes.some(size => (
+  const LabelItems = sizes.map(size => (
     <label key={size} className={`tesla-wheels__item tesla-wheels__item--${size} ${value === size ? 'tesla-wheels__item--active' : '' }`}>
       <input
         type="radio"
         name="wheelsize"
         value={size}
         checked={value === size} 
-        change={() => {changeHandler(size)}} />
+        onChange={() => {changeHandler(size)}} />
       <p>
         {size}"
       </p>

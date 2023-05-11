@@ -124,7 +124,7 @@ class TeslaBattery extends React.Component {
     // Exersise 3: put this in the TeslaStats.js 
     // and ERROR 3
     const listItems = carstats.map((stat) => (
-      <li key={stat}>
+      <li key={stat.model}>
         <div className={`tesla-stats-icon tesla-stats-icon--${stat.model.toLowerCase()}`}></div>
         <p>{stat.miles}</p>
       </li>
@@ -163,7 +163,7 @@ class TeslaBattery extends React.Component {
           </div>
           {/* ERROR 1 */}
           <TeslaWheels
-            value={this}
+            value={this.state.config.wheels}
             handleChangeWheels={this.handleChangeWheels}
           />
         </div>

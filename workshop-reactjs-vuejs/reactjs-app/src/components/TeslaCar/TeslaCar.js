@@ -12,8 +12,8 @@ const TeslaCar = (props) => (
 );
 
  //ERROR 2 
-TeslaCar.propTypes = {
-  wheelsize: PropTypes.string
+ TeslaCar.propTypes = {
+  wheelsize: PropTypes.number
 }
 
 export default TeslaCar;
